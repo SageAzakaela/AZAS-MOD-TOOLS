@@ -1,7 +1,7 @@
 [project]
 name = "survivor-signal-reboot"
 version = "0.1.0"
-description = "Survivor Signal Reboot - media design app for Project Zomboid"
+description = "Aza's Media Manager - media design app for Project Zomboid"
 readme = "README.md"
 authors = ["Survivor Radio Modder <survivor@example.com>"]
 requires-python = ">=3.10"

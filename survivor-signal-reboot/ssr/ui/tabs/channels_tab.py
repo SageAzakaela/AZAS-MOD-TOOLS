@@ -69,7 +69,7 @@ def make_tab(parent, context: AppContext):
                     text=f"Day {day_label}",
                     fill=SECONDARY_TEXT,
                     anchor="s",
-                    font=("Segoe UI Semibold", 12),
+                    font=("Spectral", 18),
                 )
 
         for hour in range(0, HOURS_IN_DAY + 1, 2):
@@ -81,7 +81,7 @@ def make_tab(parent, context: AppContext):
                 text=f"{hour:02d}:00",
                 fill=SECONDARY_TEXT,
                 anchor="e",
-                font=("Segoe UI Semibold", 12),
+                font=("Spectral", 18),
             )
 
         channel_count = max(1, len(channel_store))
@@ -226,7 +226,7 @@ def make_tab(parent, context: AppContext):
         foreground=LIGHT_TEXT,
         selectbackground=ACCENT_CYAN,
         selectforeground="#04060a",
-        font=("Segoe UI Bold", 16),
+        font=("Spectral", 16),
         activestyle="none",
         exportselection=False,
         highlightthickness=0,

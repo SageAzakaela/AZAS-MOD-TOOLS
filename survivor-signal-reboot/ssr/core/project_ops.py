@@ -78,6 +78,7 @@ def add_line_to_broadcast(
     broadcast_id: str,
     text: str,
     voice_id: Optional[str] = None,
+    character_id: Optional[str] = None,
     duration: Optional[float] = None,
     moodle: Optional[str] = None,
     effects: Optional[list[str]] = None,
@@ -90,6 +91,7 @@ def add_line_to_broadcast(
     line = Line(
         text=text,
         voice_id=voice_id,
+        character_id=character_id,
         duration=duration,
         moodle=moodle,
         effects=list(effects) if effects else [],

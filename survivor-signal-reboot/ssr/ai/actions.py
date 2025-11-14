@@ -244,6 +244,7 @@ def add_line(context: AppContext, data: Dict[str, Any]) -> Tuple[str, str]:
     moodle = data.get("moodle")
     effects = data.get("effects")
     sound_file = data.get("sound_file")
+    character_id = data.get("character_id")
     duration = _parse_duration(data.get("duration"), DEFAULT_LINE_DURATION)
     try:
         for line_text in line_texts:
@@ -252,6 +253,7 @@ def add_line(context: AppContext, data: Dict[str, Any]) -> Tuple[str, str]:
                 broadcast_id,
                 line_text,
                 voice_id=voice_id,
+                character_id=character_id,
                 moodle=moodle,
                 effects=effects,
                 sound_file=sound_file,

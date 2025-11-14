@@ -1,4 +1,4 @@
-# Survivor Signal Reboot
+# Aza's Media Manager
 
 Modern-retro tool for designing Project Zomboid media (radios, TVs, VHS, CDs, cassettes, and beyond).
 

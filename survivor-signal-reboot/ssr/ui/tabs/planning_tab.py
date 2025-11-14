@@ -63,7 +63,7 @@ def _make_panel(frame, label, text="", editable=False):
         foreground=LIGHT_TEXT,
         insertbackground="#ffffff",
         relief="flat",
-        font=("Segoe UI", 16),
+        font=("Spectral", 20),
     )
     editor.grid(row=0, column=0, sticky="nsew")
     scroll.grid(row=0, column=1, sticky="ns")
@@ -85,30 +85,30 @@ def make_tab(parent, context: AppContext):
     notebook = ttk.Notebook(frame, style="Neon.TNotebook")
     notebook.grid(row=0, column=0, sticky="nsew", padx=12, pady=12)
 
-    getting_started_text = """Survivor Signal Reboot Planning Primer
+    getting_started_text = """[SURVIVOR SIGNAL PLANNING PRIMER]
 
-OVERVIEW
-This Planning tab is where you sketch the story beats, pacing, and assets you want to produce before you dive into the technical editors. Treat each panel as a living design doc:
-- Getting Started: keep procedural reminders, team notes, or links to lore documents about the world you are building.
-- Notes: jot down temporary observations, brainstorming fragments, or TODOs that you can later move into the other tabs.
-- Timeline Planner: rough out days, hours, and the flow of broadcasts so you can compare them against the channel grids later.
-- World Building Planner: describe locations, factions, strange events, and the tone you want across the radio/TV lineup.
-- Character Planner: catalogue voices and NPCs, include inspiration (mood, sample lines, or accents), and track who is speaking when.
-- Event Planner: note triggers, props, or new channel launches tied to in-game events; keep track of how each broadcast resolves.
-- Recorded Media Planner: decide which VHS tapes, CDs, or audio drops should exist, and which broadcasts feed them.
+[OVERVIEW / WHAT TO TRACK]
+Think of this notebook as your theatrical stage directions before you hit the editors. Each tab is a living note tied to a major craft lane:
+- [Getting Started] stores your playbook: team radios, references, ritual checklists, or lore links you want visible every session.
+- [Notes] is a scratch pad for flashes of inspiration, TODO flags, or collaborator shout-outs—keep it messy, then move the important bits to the structured planners.
+- [Timeline Planner] is your longitudinal grid; sketch days → hours, mark pacing notes, and spot gaps before you start scripting lines.
+- [World Building Planner] narrates the setting. Record locations, factions, vibes, and any recurring magical or radio phenomena (use a fresh paragraph per idea).
+- [Character Planner] catalogs voices, accents, moods, and sample lines so you can match them to broadcasts when you jump into Radio/TV.
+- [Event Planner] tracks triggers, props, channel premieres, and callouts for later; think of it as the “plot beats” companion to the Timeline.
+- [Recorded Media Planner] maps VHS, CDs, and drops. Note what tapes exist, who features on them, and which broadcasts should unlock them.
 
-WORKFLOW
-1. Config -> load the base `RadioData.xml` + `RecordedMedia.lua` to populate every tab with vanilla channels, voices, and media so you can remix them.
-2. Planning -> expand these panels with your ideas, targets, and pacing notes. Use this text as an outline you can refer to while writing lines and scheduling content in the other tabs.
-3. Voices/Channels -> create or edit entities, then drop into Radio/Television/Recorded Media to author broadcasts/scenes. Cross-reference the Planning panels for tone, day offsets, and who should speak.
-4. Export -> once the data is complete, generate the XML + Lua exports and drop them into a mod. Playtest in-game, revisit Planning notes, and repeat.
+[WORKFLOW / HOW IT FLOWS]
+1. **Config First.** Load `RadioData.xml` + `RecordedMedia.lua` to plant the vanilla channels, voices, and tapes into each tab.
+2. **Plan Next.** Fill these panels with your initial beats, pacing, and tone notes. Treat the text as your story bible while writing lines and scheduling.
+3. **Build Elsewhere.** Jump into Voices/Channels, Radio, TV, or Recorded Media to author actual assets. Refer back to Planning for voice choices, day offsets, and style cues.
+4. **Export / Iterate.** When you feel stable, export the XML/Lua, test in-game, and revisit your planning notes—add notes after playtests so the history stays here.
 
-TIPS
-- Use the Timeline and Event planners to spot empty days or tightly packed hours before you start writing lines.
-- Keep character motivations in the Character planner so you can quickly check who should sound angry, calm, or mysterious.
-- Reuse the Notes panel for collaboration snippets or reminders, then copy anything important into the more structured planners.
-- Trim long-form lore into digestible bullet points so you can scan the panel quickly in the heat of writing.
-- Export often and compare your Planning notes to what appears in-game via the AI Assistant or debug tools."""
+[QUICK TIPS]
+- Use colors/labels when you paste into the Timeline planner so you can spot empty days or overloaded hours at a glance.
+- Keep Character motivations beside the voice references so you instantly remember how a speaker should deliver lines.
+- Drop AI assistant marks like `[WritePlanningNote]` to have it append context into a panel (especially helpful in the Notes or Character sections).
+- Keep the Recorded Media panel lean—list the tapes you want, then list which broadcasts feed them, with a short “why this tape deserves attention.”
+- Export regularly and compare the physical broadcast list to these panels so nothing drifts from plan to execution."""
 
     note_template = (
         "Leave notes for yourself or ask Aza to help. Think of this panel as a scratch pad for "

@@ -42,6 +42,7 @@ class Line:
     moodle: Optional[str] = None
     effects: List[str] = field(default_factory=list)
     sound_file: Optional[str] = None
+    character_id: Optional[str] = None
     guid: str = field(default_factory=lambda: uuid4().hex)
     metadata: Dict[str, str] = field(default_factory=dict)
 

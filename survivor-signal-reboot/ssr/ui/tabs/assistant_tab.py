@@ -48,7 +48,7 @@ class _ToolTip:
             relief="solid",
             borderwidth=1,
             wraplength=280,
-            font=("Segoe UI", 10),
+            font=("Segoe UI", 16),
         )
         label.pack(padx=6, pady=4)
 

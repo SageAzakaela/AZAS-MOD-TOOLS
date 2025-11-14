@@ -11,7 +11,7 @@ from ...config.settings import save_settings, settings
 from ...core import AppContext
 from ...io import importers
 from ...io import project as project_io
-from ..styles import ACCENT_CYAN
+from ..styles import ACCENT_CYAN, SECONDARY_TEXT
 
 
 def _format_path(path):
@@ -128,7 +128,7 @@ def make_tab(parent, context: AppContext):
 
     info = ttk.Label(
         frame,
-        text="Load vanilla Project Zomboid data on demand.",
+        text="Aza's Media Manager is reading for vanilla data. Point it at your Project Zomboid install if you haven't already.",
         foreground="#d1d1f0",
     )
     info.grid(row=0, column=0, sticky="w", padx=12, pady=(8, 4))
@@ -180,6 +180,12 @@ def make_tab(parent, context: AppContext):
         variable=ai_tab_var,
         command=lambda: _update_ai_tab_setting(ai_tab_var, status_var),
     ).grid(row=5, column=0, sticky="w", padx=8, pady=(0, 8))
+
+    ttk.Label(
+        general_frame,
+        text="A program by Azakaela 2025 • Spiffo with the bat 🦇",
+        foreground=SECONDARY_TEXT,
+    ).grid(row=6, column=0, sticky="w", padx=8, pady=(0, 8))
 
     def save_ai_key():
         settings.ai_api_key = ai_key_var.get().strip()

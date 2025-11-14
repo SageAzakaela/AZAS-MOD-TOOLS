@@ -9,7 +9,7 @@ VANILLA_ASSETS_DIR = Path(__file__).resolve().parents[2] / "VanillaFiles"
 
 @dataclass
 class Settings:
-    pz_base_path: Path = Path(os.environ.get("PZ_HOME", r"D:\SteamLibrary\steamapps\common\ProjectZomboid"))
+    pz_base_path: Path = Path(os.environ.get("PZ_HOME", r":\SteamLibrary\steamapps\common\ProjectZomboid"))
     auto_load_vanilla: bool = False
     transcript_line_limit: int = 180
     ai_api_key: str = ""
@@ -17,6 +17,7 @@ class Settings:
     last_recorded_path: str = ""
     last_translation_path: str = ""
     show_ai_tab: bool = False
+    pz_configured: bool = False
 
     @property
     def radio_data_path(self) -> Path:

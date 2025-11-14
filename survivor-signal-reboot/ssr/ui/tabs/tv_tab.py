@@ -5,7 +5,8 @@ from typing import Callable
 
 from ...config import settings
 from ...core import AppContext, Line, project_ops
-from ..styles import ACCENT_CYAN, LIGHT_TEXT, SLATE_BG
+from ...core.models import Character
+from ..styles import ACCENT_CYAN, LIGHT_TEXT, SECONDARY_TEXT, SLATE_BG
 from .utils import channel_color_map, fallback_title, format_time
 
 
@@ -39,6 +40,8 @@ def make_tab(parent, context: AppContext):
     frame.columnconfigure(1, weight=1)
     frame.columnconfigure(2, weight=2)
     frame.rowconfigure(0, weight=1)
+    frame.rowconfigure(1, weight=0)
+    frame.rowconfigure(2, weight=1)
 
     channel_frame = ttk.LabelFrame(frame, text="TV Channels")
     channel_frame.grid(row=0, column=0, sticky="ns", padx=12, pady=12)
@@ -50,7 +53,7 @@ def make_tab(parent, context: AppContext):
         exportselection=False,
         activestyle="none",
         background=SLATE_BG,
-        font=("Segoe UI Bold", 16),
+        font=("Spectral", 20),
         foreground=LIGHT_TEXT,
         selectbackground=ACCENT_CYAN,
         selectforeground="#04060a",
@@ -64,7 +67,22 @@ def make_tab(parent, context: AppContext):
     broadcast_frame = ttk.LabelFrame(frame, text="Broadcasts")
     broadcast_frame.grid(row=0, column=1, sticky="nsew", padx=12, pady=12)
     broadcast_frame.columnconfigure(0, weight=1)
-    broadcast_frame.rowconfigure(0, weight=1)
+    broadcast_frame.rowconfigure(0, weight=0)
+    broadcast_frame.rowconfigure(1, weight=1)
+    broadcast_frame.rowconfigure(2, weight=0)
+    broadcast_search_var = tk.StringVar()
+    broadcast_search_frame = ttk.Frame(broadcast_frame)
+    broadcast_search_frame.grid(row=0, column=0, sticky="ew", padx=8, pady=(8, 2))
+    broadcast_search_frame.columnconfigure(1, weight=1)
+    ttk.Label(broadcast_search_frame, text="Search").grid(row=0, column=0, sticky="w")
+    ttk.Entry(broadcast_search_frame, textvariable=broadcast_search_var).grid(
+        row=0, column=1, sticky="ew", padx=(4, 0)
+    )
+    ttk.Button(
+        broadcast_search_frame,
+        text="Clear",
+        command=lambda: broadcast_search_var.set(""),
+    ).grid(row=0, column=2, sticky="w", padx=(4, 0))
     columns = ("day", "start", "end", "first_line", "lines")
     broadcast_tree = ttk.Treeview(
         broadcast_frame, columns=columns, show="headings", selectmode="browse", height=20
@@ -73,13 +91,13 @@ def make_tab(parent, context: AppContext):
     for col, heading in zip(columns, ("Day", "Start", "End", "First line", "Scenes")):
         broadcast_tree.heading(col, text=heading)
         broadcast_tree.column(col, anchor="w", stretch=(col == "first_line"), width=widths.get(col, 120))
-    broadcast_tree.grid(row=0, column=0, sticky="nsew")
+    broadcast_tree.grid(row=1, column=0, sticky="nsew")
     broadcast_scroll = ttk.Scrollbar(broadcast_frame, orient="vertical", command=broadcast_tree.yview)
     broadcast_tree.configure(yscrollcommand=broadcast_scroll.set)
-    broadcast_scroll.grid(row=0, column=1, sticky="ns")
+    broadcast_scroll.grid(row=1, column=1, sticky="ns")
 
     creation_frame = ttk.LabelFrame(frame, text="Create broadcast")
-    creation_frame.grid(row=1, column=1, sticky="ew", padx=12, pady=(0, 12))
+    creation_frame.grid(row=2, column=1, sticky="ew", padx=12, pady=(0, 12))
     creation_frame.columnconfigure(1, weight=1)
     new_title_var = tk.StringVar()
     new_desc_var = tk.StringVar()
@@ -88,6 +106,13 @@ def make_tab(parent, context: AppContext):
     new_duration_var = tk.StringVar(value=DURATIONS[0])
     channel_combo = ttk.Combobox(creation_frame, state="readonly")
     creation_status_var = tk.StringVar(value="")
+    creation_line_text_var = tk.StringVar()
+    creation_voice_var = tk.StringVar()
+    creation_character_var = tk.StringVar()
+    creation_moodle_var = tk.StringVar()
+    creation_effects_var = tk.StringVar()
+    creation_sound_var = tk.StringVar()
+    creation_character_display_map: dict[str, str] = {}
 
     ttk.Label(creation_frame, text="Title").grid(row=0, column=0, sticky="w", padx=4, pady=2)
     ttk.Entry(creation_frame, textvariable=new_title_var).grid(row=0, column=1, sticky="ew", padx=4, pady=2)
@@ -115,19 +140,78 @@ def make_tab(parent, context: AppContext):
         state="readonly",
     )
     duration_combo.grid(row=5, column=1, sticky="w", padx=4, pady=2)
+
+    creation_notebook = ttk.Notebook(creation_frame, style="Neon.TNotebook")
+    creation_notebook.grid(row=6, column=0, columnspan=2, sticky="nsew", pady=(8, 4))
+    creation_notebook.columnconfigure(0, weight=1)
+    creation_line_tab = ttk.Frame(creation_notebook)
+    creation_line_tab.columnconfigure(1, weight=1)
+    creation_notebook.add(creation_line_tab, text="Line")
+    ttk.Label(creation_line_tab, text="Line text").grid(row=0, column=0, sticky="w", padx=4, pady=2)
+    ttk.Entry(creation_line_tab, textvariable=creation_line_text_var).grid(
+        row=0, column=1, sticky="ew", padx=4, pady=2
+    )
+    ttk.Label(creation_line_tab, text="Voice").grid(row=1, column=0, sticky="w", padx=4, pady=2)
+    creation_voice_combo = ttk.Combobox(creation_line_tab, textvariable=creation_voice_var, state="readonly")
+    creation_voice_combo.grid(row=1, column=1, sticky="ew", padx=4, pady=2)
+    ttk.Label(creation_line_tab, text="Character").grid(row=2, column=0, sticky="w", padx=4, pady=2)
+    creation_character_combo = ttk.Combobox(
+        creation_line_tab, textvariable=creation_character_var, state="readonly"
+    )
+    creation_character_combo.grid(row=2, column=1, sticky="ew", padx=4, pady=2)
+    ttk.Label(creation_line_tab, text="Moodle").grid(row=3, column=0, sticky="w", padx=4, pady=2)
+    ttk.Entry(creation_line_tab, textvariable=creation_moodle_var).grid(
+        row=3, column=1, sticky="ew", padx=4, pady=2
+    )
+    ttk.Label(creation_line_tab, text="Effects").grid(row=4, column=0, sticky="w", padx=4, pady=2)
+    ttk.Entry(creation_line_tab, textvariable=creation_effects_var).grid(
+        row=4, column=1, sticky="ew", padx=4, pady=2
+    )
+    ttk.Label(creation_line_tab, text="Sound file").grid(row=5, column=0, sticky="w", padx=4, pady=2)
+    ttk.Entry(creation_line_tab, textvariable=creation_sound_var).grid(
+        row=5, column=1, sticky="ew", padx=4, pady=2
+    )
+
+    creation_transcript_tab = ttk.Frame(creation_notebook)
+    creation_transcript_tab.columnconfigure(0, weight=1)
+    creation_transcript_tab.rowconfigure(0, weight=1)
+    creation_notebook.add(creation_transcript_tab, text="Transcript")
+    creation_transcript_text = tk.Text(
+        creation_transcript_tab,
+        height=5,
+        wrap="word",
+        background=SLATE_BG,
+        foreground=LIGHT_TEXT,
+        insertbackground=ACCENT_CYAN,
+        relief="sunken",
+    )
+    creation_transcript_text.grid(row=0, column=0, sticky="nsew", padx=4, pady=4)
+    creation_transcript_scroll = ttk.Scrollbar(
+        creation_transcript_tab, orient="vertical", command=creation_transcript_text.yview
+    )
+    creation_transcript_scroll.grid(row=0, column=1, sticky="ns", padx=(0, 4), pady=4)
+    creation_transcript_text.configure(yscrollcommand=creation_transcript_scroll.set)
+    ttk.Label(
+        creation_transcript_tab,
+        text="Use Speaker: line format or plain text for each scene.",
+        foreground=SECONDARY_TEXT,
+    ).grid(row=1, column=0, sticky="w", padx=4, pady=(0, 4))
+
     ttk.Button(
         creation_frame,
         text="Create broadcast",
         style="Accent.TButton",
         command=lambda: _handle_create_broadcast(),
-    ).grid(row=6, column=0, columnspan=2, pady=4)
-    ttk.Label(creation_frame, textvariable=creation_status_var, foreground="#f4d6a2").grid(
-        row=7, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 0)
-    )
+    ).grid(row=7, column=0, columnspan=2, pady=4)
+    ttk.Label(
+        creation_frame,
+        textvariable=creation_status_var,
+        foreground="#f4d6a2",
+    ).grid(row=8, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 0))
     channel_combo.bind("<<ComboboxSelected>>", lambda _: _update_channel_defaults())
 
     detail_frame = ttk.LabelFrame(frame, text="Broadcast details")
-    detail_frame.grid(row=0, column=2, sticky="nsew", padx=12, pady=12)
+    detail_frame.grid(row=0, column=2, rowspan=3, sticky="nsew", padx=12, pady=12)
     detail_frame.columnconfigure(0, weight=1)
     detail_frame.rowconfigure(0, weight=0)
     detail_frame.rowconfigure(1, weight=1)
@@ -227,6 +311,8 @@ def make_tab(parent, context: AppContext):
     lines_scroll.grid(row=0, column=1, sticky="ns")
 
     preferred_voice_id: str | None = None
+    preferred_character_id: str | None = None
+    line_character_display_map: dict[str, str] = {}
 
     def _apply_to_selected_lines(operation: Callable[[Line], None]):
         active = context.active_broadcast
@@ -248,6 +334,25 @@ def make_tab(parent, context: AppContext):
 
     def _clear_voice_from_selection():
         _apply_to_selected_lines(lambda line: setattr(line, "voice_id", None))
+
+    def _character_display(character: Character) -> str:
+        name = character.name or "Character"
+        return f"{name} ({character.id})"
+
+    def _character_color(character: Character) -> str:
+        for vid in character.voice_ids:
+            voice = context.project.voices.get(vid)
+            if voice and voice.color:
+                return voice.color
+        return "#000000"
+
+    def _assign_character_to_selection(character_id: str):
+        nonlocal preferred_character_id
+        _apply_to_selected_lines(lambda line: setattr(line, "character_id", character_id))
+        preferred_character_id = character_id
+
+    def _clear_character_from_selection():
+        _apply_to_selected_lines(lambda line: setattr(line, "character_id", None))
 
     def _add_effect_to_selection():
         effect = simpledialog.askstring("Add effect", "Enter effect tag (comma separated) or single:")
@@ -275,6 +380,21 @@ def make_tab(parent, context: AppContext):
             context_menu.add_cascade(label="Set voice", menu=voice_menu)
             context_menu.add_command(label="Clear voice", command=_clear_voice_from_selection)
             context_menu.add_separator()
+        character_menu = tk.Menu(context_menu, tearoff=0)
+        characters = sorted(context.project.characters.values(), key=lambda char: (char.name or char.id).lower())
+        if characters:
+            for character in characters:
+                color = _character_color(character)
+                display = _character_display(character)
+                character_menu.add_command(
+                    label=display,
+                    command=lambda cid=character.id: _assign_character_to_selection(cid),
+                    background=color,
+                    foreground=_contrast_color(color),
+                )
+            context_menu.add_cascade(label="Set character", menu=character_menu)
+            context_menu.add_command(label="Clear character", command=_clear_character_from_selection)
+            context_menu.add_separator()
         context_menu.add_command(label="Add effect", command=_add_effect_to_selection)
         context_menu.add_command(label="Remove effects", command=_remove_effects_from_selection)
 
@@ -290,6 +410,7 @@ def make_tab(parent, context: AppContext):
     line_editor.columnconfigure(1, weight=1)
     line_text_var = tk.StringVar()
     line_voice_var = tk.StringVar()
+    line_character_var = tk.StringVar()
     line_moodle_var = tk.StringVar()
     line_effects_var = tk.StringVar()
     line_sound_var = tk.StringVar()
@@ -299,15 +420,18 @@ def make_tab(parent, context: AppContext):
     ttk.Label(line_editor, text="Voice").grid(row=1, column=0, sticky="w", padx=4, pady=2)
     voice_combo = ttk.Combobox(line_editor, textvariable=line_voice_var, state="readonly")
     voice_combo.grid(row=1, column=1, sticky="ew", padx=4, pady=2)
-    ttk.Label(line_editor, text="Moodle").grid(row=2, column=0, sticky="w", padx=4, pady=2)
-    ttk.Entry(line_editor, textvariable=line_moodle_var).grid(row=2, column=1, sticky="ew", padx=4, pady=2)
-    ttk.Label(line_editor, text="Effects").grid(row=3, column=0, sticky="w", padx=4, pady=2)
-    ttk.Entry(line_editor, textvariable=line_effects_var).grid(row=3, column=1, sticky="ew", padx=4, pady=2)
-    ttk.Label(line_editor, text="Sound file").grid(row=4, column=0, sticky="w", padx=4, pady=2)
-    ttk.Entry(line_editor, textvariable=line_sound_var).grid(row=4, column=1, sticky="ew", padx=4, pady=2)
+    ttk.Label(line_editor, text="Character").grid(row=2, column=0, sticky="w", padx=4, pady=2)
+    character_combo = ttk.Combobox(line_editor, textvariable=line_character_var, state="readonly")
+    character_combo.grid(row=2, column=1, sticky="ew", padx=4, pady=2)
+    ttk.Label(line_editor, text="Moodle").grid(row=3, column=0, sticky="w", padx=4, pady=2)
+    ttk.Entry(line_editor, textvariable=line_moodle_var).grid(row=3, column=1, sticky="ew", padx=4, pady=2)
+    ttk.Label(line_editor, text="Effects").grid(row=4, column=0, sticky="w", padx=4, pady=2)
+    ttk.Entry(line_editor, textvariable=line_effects_var).grid(row=4, column=1, sticky="ew", padx=4, pady=2)
+    ttk.Label(line_editor, text="Sound file").grid(row=5, column=0, sticky="w", padx=4, pady=2)
+    ttk.Entry(line_editor, textvariable=line_sound_var).grid(row=5, column=1, sticky="ew", padx=4, pady=2)
 
     line_button_frame = ttk.Frame(line_editor)
-    line_button_frame.grid(row=5, column=0, columnspan=2, pady=6)
+    line_button_frame.grid(row=6, column=0, columnspan=2, pady=6)
     ttk.Button(
         line_button_frame,
         text="Update scene",
@@ -316,6 +440,7 @@ def make_tab(parent, context: AppContext):
             lines_list,
             line_text_var,
             line_voice_var,
+            line_character_var,
             line_moodle_var,
             line_effects_var,
             line_sound_var,
@@ -331,6 +456,7 @@ def make_tab(parent, context: AppContext):
         lines_list,
         line_text_var,
         line_voice_var,
+        line_character_var,
         line_moodle_var,
         line_effects_var,
         line_sound_var,
@@ -425,6 +551,21 @@ def make_tab(parent, context: AppContext):
         refresh_broadcasts()
         _update_channel_defaults()
 
+    def _tv_broadcast_matches_search(broadcast, snippet: str, entry, term: str) -> bool:
+        if not term:
+            return True
+        haystack = " ".join(
+            filter(
+                None,
+                [
+                    broadcast.title or "",
+                    snippet,
+                    str(entry.day + 1),
+                ],
+            )
+        )
+        return term in haystack.lower()
+
     def refresh_broadcasts():
         nonlocal broadcast_items
         broadcast_items = []
@@ -435,11 +576,11 @@ def make_tab(parent, context: AppContext):
             return
         entries = sorted(channel.schedule, key=lambda entry: (entry.day, entry.start))
         voice_tag_map = {}
+        search_term = (broadcast_search_var.get() or "").strip().lower()
         for entry in entries:
             broadcast = context.project.broadcasts.get(entry.broadcast_id)
             if not broadcast:
                 continue
-            broadcast_items.append((entry, broadcast))
             first_line = broadcast.lines[0] if broadcast.lines else None
             snippet = (
                 first_line.text.splitlines()[0].strip()
@@ -447,6 +588,9 @@ def make_tab(parent, context: AppContext):
                 else "(no lines yet)"
             )
             snippet = snippet[:60]
+            if not _tv_broadcast_matches_search(broadcast, snippet, entry, search_term):
+                continue
+            broadcast_items.append((entry, broadcast))
             start_label = format_time(entry.start)
             end_label = format_time(entry.end)
             values = (
@@ -510,12 +654,14 @@ def make_tab(parent, context: AppContext):
         schedule_duration_var.set(DURATIONS[min(len(DURATIONS)-1, max(0, int((active.end_offset or active.start_offset - active.start_offset)/1800)))])
         for idx, line in enumerate(active.lines):
             voice = context.project.voices.get(line.voice_id)
-            name = voice.name if voice else "Unknown"
-            display = f"{idx + 1:02d}. {name}: {line.text}"
+            character = context.project.characters.get(line.character_id)
+            speaker_name = character.name if character else (voice.name if voice else "Unknown")
+            display = f"{idx + 1:02d}. {speaker_name}: {line.text}"
             lines_list.insert(tk.END, display)
             if voice and voice.color:
                 lines_list.itemconfig(idx, fg=voice.color)
         update_voice_combobox()
+        update_character_combobox()
         refresh_transcript(context, transcript_text, speaker_list)
 
     def on_channel_select(_=None):
@@ -540,7 +686,100 @@ def make_tab(parent, context: AppContext):
         names = [voice.name for voice in context.project.voices.values()]
         voice_combo["values"] = names
 
+    def update_character_combobox():
+        line_character_display_map.clear()
+        sorted_characters = sorted(
+            context.project.characters.values(), key=lambda char: (char.name or char.id).lower()
+        )
+        names = []
+        for character in sorted_characters:
+            display = _character_display(character)
+            names.append(display)
+            line_character_display_map[display] = character.id
+        character_combo["values"] = names
+        if line_character_var.get() not in line_character_display_map:
+            line_character_var.set("")
+
     update_voice_combobox()
+
+    def _update_creation_voice_combo():
+        names = [voice.name for voice in context.project.voices.values()]
+        creation_voice_combo["values"] = names
+        if creation_voice_var.get() not in names:
+            creation_voice_var.set("")
+
+    def _update_creation_character_combo():
+        creation_character_display_map.clear()
+        sorted_characters = sorted(
+            context.project.characters.values(), key=lambda char: (char.name or char.id).lower()
+        )
+        names = []
+        for character in sorted_characters:
+            display = _character_display(character)
+            names.append(display)
+            creation_character_display_map[display] = character.id
+        creation_character_combo["values"] = names
+        if creation_character_var.get() not in creation_character_display_map:
+            creation_character_var.set("")
+
+    def _find_voice_id_by_name(name: str) -> str | None:
+        if not name:
+            return None
+        match = next((v for v in context.project.voices.values() if v.name == name), None)
+        return match.id if match else None
+
+    def _resolve_speaker_hint(hint: str) -> tuple[str | None, str | None]:
+        lowered = (hint or "").strip().lower()
+        if not lowered:
+            return None, None
+        for character in context.project.characters.values():
+            if character.name and character.name.lower() == lowered:
+                voice_id = character.voice_ids[0] if character.voice_ids else None
+                return voice_id, character.id
+        for voice in context.project.voices.values():
+            if voice.name and voice.name.lower() == lowered:
+                return voice.id, None
+        return None, None
+
+    def _line_spec_from_fields(text: str, voice_id: str | None, character_id: str | None) -> dict:
+        return {
+            "text": text,
+            "voice_id": voice_id,
+            "character_id": character_id,
+            "moodle": creation_moodle_var.get() or None,
+            "effects": [effect.strip() for effect in creation_effects_var.get().split(",") if effect.strip()],
+            "sound_file": creation_sound_var.get() or None,
+        }
+
+    def _collect_creation_line_specs() -> list[dict]:
+        specs: list[dict] = []
+        current_tab = creation_notebook.index("current")
+        if current_tab == 0:
+            text = creation_line_text_var.get().strip()
+            if not text:
+                return specs
+            voice_id = _find_voice_id_by_name(creation_voice_var.get())
+            character_display = creation_character_var.get()
+            character_id = creation_character_display_map.get(character_display)
+            specs.append(_line_spec_from_fields(text, voice_id, character_id))
+            return specs
+        for raw_line in creation_transcript_text.get("1.0", "end").splitlines():
+            trimmed = raw_line.strip()
+            if not trimmed:
+                continue
+            if ":" in trimmed:
+                speaker, remainder = trimmed.split(":", 1)
+                voice_hint, character_hint = _resolve_speaker_hint(speaker)
+                line_text = remainder.strip()
+            else:
+                voice_hint, character_hint = (None, None)
+                line_text = trimmed
+            if not line_text:
+                continue
+            voice_id = voice_hint or _find_voice_id_by_name(creation_voice_var.get())
+            character_id = character_hint or creation_character_display_map.get(creation_character_var.get())
+            specs.append(_line_spec_from_fields(line_text, voice_id, character_id))
+        return specs
 
     def _handle_add_line():
         active = context.active_broadcast
@@ -551,6 +790,7 @@ def make_tab(parent, context: AppContext):
             active.id,
             line_text_var.get(),
             voice_id=preferred_voice_id,
+            character_id=preferred_character_id,
             moodle=line_moodle_var.get() or None,
             effects=[effect.strip() for effect in line_effects_var.get().split(",") if effect.strip()],
             sound_file=line_sound_var.get() or None,
@@ -568,6 +808,7 @@ def make_tab(parent, context: AppContext):
         lines_list,
         line_text_var,
         line_voice_var,
+        line_character_var,
         line_moodle_var,
         line_effects_var,
         line_sound_var,
@@ -583,11 +824,16 @@ def make_tab(parent, context: AppContext):
             return
         line = active.lines[idx]
         nonlocal preferred_voice_id
+        nonlocal preferred_character_id
         line.text = line_text_var.get()
         voice_name = line_voice_var.get()
         voice = next((v for v in context.project.voices.values() if v.name == voice_name), None)
         line.voice_id = voice.id if voice else None
         preferred_voice_id = voice.id if voice else preferred_voice_id
+        character_display = line_character_var.get()
+        character_id = line_character_display_map.get(character_display)
+        line.character_id = character_id
+        preferred_character_id = character_id if character_id else preferred_character_id
         line.moodle = line_moodle_var.get()
         effects = [effect.strip() for effect in line_effects_var.get().split(",") if effect.strip()]
         line.effects = effects
@@ -691,6 +937,13 @@ def make_tab(parent, context: AppContext):
         new_day_var.set(0)
         start_label_var.set(START_TIMES[0])
         new_duration_var.set(DURATIONS[0])
+        creation_line_text_var.set("")
+        creation_voice_var.set("")
+        creation_character_var.set("")
+        creation_moodle_var.set("")
+        creation_effects_var.set("")
+        creation_sound_var.set("")
+        creation_transcript_text.delete("1.0", "end")
 
     def _compute_next_timing(channel_id: str, skip_broadcast: str | None = None) -> tuple[int, float]:
         channel = context.project.channels.get(channel_id)
@@ -742,6 +995,19 @@ def make_tab(parent, context: AppContext):
         except ValueError:
             creation_status_var.set("Failed to create broadcast.")
             return
+        specs = _collect_creation_line_specs()
+        for spec in specs:
+            project_ops.add_line_to_broadcast(
+                context,
+                broadcast.id,
+                spec["text"],
+                voice_id=spec["voice_id"],
+                character_id=spec["character_id"],
+                moodle=spec["moodle"],
+                effects=spec["effects"],
+                sound_file=spec["sound_file"],
+                notify=False,
+            )
         refresh_broadcasts()
         context.select_broadcast(broadcast.id)
         update_selection()
@@ -774,7 +1040,8 @@ def make_tab(parent, context: AppContext):
             return
         for line in active.lines:
             voice = context.project.voices.get(line.voice_id)
-            speaker = voice.name if voice else "Unknown"
+            character = context.project.characters.get(line.character_id)
+            speaker = character.name if character else (voice.name if voice else "Unknown")
             speaker_list.insert(tk.END, speaker)
             transcript_text.insert("end", f"{line.text}\n")
 
@@ -833,6 +1100,7 @@ def make_tab(parent, context: AppContext):
         lines_list,
         text_var,
         voice_var,
+        character_var,
         moodle_var,
         effects_var,
         sound_var,
@@ -850,6 +1118,8 @@ def make_tab(parent, context: AppContext):
         text_var.set(line.text)
         voice = context.project.voices.get(line.voice_id)
         voice_var.set(voice.name if voice else "")
+        character = context.project.characters.get(line.character_id)
+        character_var.set(_character_display(character) if character else "")
         moodle_var.set(line.moodle or "")
         effects_var.set(", ".join(line.effects))
         sound_var.set(line.sound_file or "")
@@ -861,5 +1131,10 @@ def make_tab(parent, context: AppContext):
     refresh_channels()
     context.register_refresh_callback(refresh_channels)
     context.register_refresh_callback(update_voice_combobox)
+    context.register_refresh_callback(update_character_combobox)
+    context.register_refresh_callback(_update_creation_voice_combo)
+    context.register_refresh_callback(_update_creation_character_combo)
+    broadcast_search_var.trace_add("write", lambda *_: refresh_broadcasts())
+    broadcast_search_var.trace_add("write", lambda *_: refresh_broadcasts())
 
     return frame

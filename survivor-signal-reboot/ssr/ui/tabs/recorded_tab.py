@@ -4,7 +4,33 @@ from uuid import uuid4
 
 from ...core import AppContext
 from ...core.models import RecordedMediaEntry, RecordedMediaLine
-from ..styles import LIGHT_TEXT, PANEL_BG, ACCENT_CYAN
+from ..styles import (
+    ACCENT_BLUE,
+    ACCENT_CYAN,
+    ACCENT_MAGENTA,
+    FONT,
+    LIGHT_TEXT,
+    MONO_FONT,
+    PANEL_BG,
+    SECONDARY_TEXT,
+)
+
+
+
+def _rgb_to_hex(r, g, b):
+    try:
+        values = tuple(int(max(0, min(255, float(val)))) for val in (r, g, b))
+    except (ValueError, TypeError):
+        values = (255, 255, 255)
+    return "#{:02x}{:02x}{:02x}".format(*values)
+
+
+CATEGORY_COLORS = {
+    "CDs": ACCENT_MAGENTA,
+    "Home-VHS": ACCENT_CYAN,
+    "Retail-VHS": ACCENT_BLUE,
+}
+
 
 
 def _make_category_panel(frame, context: AppContext, title, category_filter):
@@ -17,13 +43,30 @@ def _make_category_panel(frame, context: AppContext, title, category_filter):
     list_frame.grid(row=0, column=0, sticky="nsew", padx=8, pady=8)
     list_frame.columnconfigure(0, weight=1)
     list_frame.rowconfigure(0, weight=1)
-    entry_list = tk.Listbox(list_frame, height=14, background="#0a1022", foreground=LIGHT_TEXT)
+    search_var = tk.StringVar()
+    filter_frame = ttk.Frame(panel)
+    filter_frame.grid(row=0, column=0, sticky="new", padx=8, pady=(8, 0))
+    filter_frame.columnconfigure(1, weight=1)
+    ttk.Label(filter_frame, text="Search").grid(row=0, column=0, sticky="w")
+    ttk.Entry(filter_frame, textvariable=search_var).grid(row=0, column=1, sticky="ew", padx=(4, 0))
+    ttk.Button(filter_frame, text="Clear", command=lambda: search_var.set("")).grid(row=0, column=2, sticky="w", padx=(4, 0))
+
+    entry_list = tk.Listbox(
+        list_frame,
+        height=14,
+        background=PANEL_BG,
+        foreground=LIGHT_TEXT,
+        highlightthickness=0,
+        activestyle="none",
+        borderwidth=0,
+        font=FONT,
+    )
     entry_list.grid(row=0, column=0, sticky="nsew")
     scrollbar = ttk.Scrollbar(list_frame, orient="vertical", command=entry_list.yview)
     scrollbar.grid(row=0, column=1, sticky="ns")
     entry_list.configure(yscrollcommand=scrollbar.set)
 
-    detail_frame = ttk.LabelFrame(panel, text=f"{title} details")
+    detail_frame = ttk.LabelFrame(panel, text=f"{title} details", borderwidth=1, relief="solid")
     detail_frame.grid(row=0, column=1, sticky="nsew", padx=8, pady=8)
     detail_frame.columnconfigure(0, weight=1)
     detail_frame.rowconfigure(3, weight=1)
@@ -47,10 +90,23 @@ def _make_category_panel(frame, context: AppContext, title, category_filter):
     ttk.Label(detail_frame, text="Spawn").grid(row=4, column=0, sticky="w", padx=8, pady=2)
     ttk.Entry(detail_frame, textvariable=spawn_var).grid(row=4, column=1, sticky="ew", padx=8, pady=2)
 
-    info = ttk.Label(detail_frame, text="Select an entry to inspect or edit it.")
+    info = ttk.Label(
+        detail_frame,
+        text="Select an entry to inspect or edit it.",
+        foreground=SECONDARY_TEXT,
+    )
     info.grid(row=5, column=0, columnspan=2, sticky="w", padx=8, pady=4)
 
-    lines_list = tk.Listbox(detail_frame, height=8, background="#050816", foreground=LIGHT_TEXT)
+    lines_list = tk.Listbox(
+        detail_frame,
+        height=8,
+        background=ACCENT_BLUE,
+        foreground=LIGHT_TEXT,
+        highlightthickness=0,
+        activestyle="none",
+        borderwidth=0,
+        font=MONO_FONT,
+    )
     lines_list.grid(row=6, column=0, columnspan=2, sticky="nsew", padx=8, pady=4)
     detail_frame.rowconfigure(6, weight=1)
 
@@ -81,9 +137,15 @@ def _make_category_panel(frame, context: AppContext, title, category_filter):
         detail_frame,
         height=6,
         wrap="word",
-        background=PANEL_BG,
+        background="#0b0f1d",
         foreground=LIGHT_TEXT,
         insertbackground="#ffffff",
+        relief="solid",
+        borderwidth=1,
+        highlightthickness=1,
+        highlightbackground=LIGHT_TEXT,
+        highlightcolor=ACCENT_CYAN,
+        font=MONO_FONT,
     )
     transcript_text.grid(row=8, column=0, columnspan=2, sticky="nsew", padx=8, pady=4)
     detail_frame.rowconfigure(8, weight=0)
@@ -107,9 +169,18 @@ def _make_category_panel(frame, context: AppContext, title, category_filter):
     current_line_index = None
 
     def get_entries():
-        return [
-            entry for entry in context.project.recorded_media.values()
+        term = (search_var.get() or "").strip().lower()
+        entries = [
+            entry
+            for entry in context.project.recorded_media.values()
             if entry.category == category_filter
+        ]
+        if not term:
+            return entries
+        return [
+            entry
+            for entry in entries
+            if term in entry.title.lower() or term in (entry.author or "").lower()
         ]
 
     def refresh():
@@ -117,7 +188,12 @@ def _make_category_panel(frame, context: AppContext, title, category_filter):
         entries = get_entries()
         for entry in entries:
             entry_list.insert(tk.END, f"{entry.title} ({entry.author})")
+            idx = entry_list.size() - 1
+            color = CATEGORY_COLORS.get(entry.category, LIGHT_TEXT)
+            entry_list.itemconfig(idx, foreground=color)
         info.configure(text=f"{len(entries)} entries loaded.")
+
+    search_var.trace_add("write", lambda *_: refresh())
 
     def update_detail(_lines_list, _info, listbox=None):
         nonlocal current_entry_id
@@ -145,6 +221,7 @@ def _make_category_panel(frame, context: AppContext, title, category_filter):
         for idx, line in enumerate(entry.lines):
             code = f" [{line.codes}]" if line.codes else ""
             _lines_list.insert(tk.END, f"{idx+1:02d}. {line.text}{code}")
+            _lines_list.itemconfig(idx, foreground=_rgb_to_hex(line.r, line.g, line.b))
 
     def apply_metadata():
         if not current_entry_id:

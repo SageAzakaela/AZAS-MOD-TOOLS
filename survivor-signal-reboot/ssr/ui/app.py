@@ -1,8 +1,8 @@
 import tkinter as tk
 from pathlib import Path
-from tkinter import ttk
+from tkinter import filedialog, messagebox, ttk
 
-from ..config import settings
+from ..config import save_settings, settings
 from ..core import AppContext
 from . import styles
 from ..utils.typewriter_sound import TypewriterSoundPlayer
@@ -37,6 +37,27 @@ TAB_ORDER = [
     (search_tab, "Search", "201px-404SpiffoMascotMap.png"),
     (assistant_tab, "Assistant", "221px-SpiffoDO.png"),
 ]
+
+
+def _prompt_for_project_zomboid(root: tk.Tk) -> None:
+    if settings.pz_configured and settings.pz_base_path.exists():
+        return
+    messagebox.showinfo(
+        "Project Zomboid path",
+        "Please point Aza's Media Manager to your Project Zomboid install so the vanilla files can load.",
+        parent=root,
+    )
+    selected = filedialog.askdirectory(title="Select Project Zomboid install", parent=root)
+    if selected:
+        settings.pz_base_path = Path(selected)
+        settings.pz_configured = True
+        save_settings()
+    else:
+        messagebox.showwarning(
+            "Path missing",
+            "No path selected. Vanilla assets will remain unavailable until you choose the install folder.",
+            parent=root,
+        )
 
 
 def _load_icon(filename: str, size: int = ICON_SIZE) -> tk.PhotoImage | None:
@@ -86,9 +107,11 @@ def build_menu(root, context: AppContext):
 
 def main():
     root = tk.Tk()
-    root.title("Survivor Signal Reboot")
+    root.title("Aza's Media Manager")
     root.state("zoomed")
     styles.apply_dark_style(root)
+
+    _prompt_for_project_zomboid(root)
 
     typewriter_player = TypewriterSoundPlayer()
     root.bind_all("<Key>", lambda event: typewriter_player.trigger())

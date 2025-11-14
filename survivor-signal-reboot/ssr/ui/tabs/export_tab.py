@@ -21,7 +21,7 @@ def make_tab(parent, context: AppContext):
     text_frame.columnconfigure(0, weight=1)
     text_frame.rowconfigure(0, weight=1)
 
-    preview = tk.Text(text_frame, wrap="none")
+    preview = tk.Text(text_frame, wrap="none", font=("VT323", 12))
     preview.grid(row=0, column=0, sticky="nsew")
     vsb = ttk.Scrollbar(text_frame, orient="vertical", command=preview.yview)
     preview.configure(yscrollcommand=vsb.set)
@@ -30,10 +30,15 @@ def make_tab(parent, context: AppContext):
     status_var = tk.StringVar(value="Ready to export.")
     mod_output_var = tk.StringVar(value=str(Path.cwd()))
     mod_id_var = tk.StringVar(value="survivor_signal_reboot")
-    mod_name_var = tk.StringVar(value="Survivor Signal Reboot")
+    mod_name_var = tk.StringVar(value="Aza's Media Manager")
     mod_description_var = tk.StringVar(value="Generated mod")
     mod_version_var = tk.StringVar(value="1.0")
     mod_thumbnail_var = tk.StringVar(value="")
+
+    def _pick_folder(target_var: tk.StringVar) -> None:
+        selected = filedialog.askdirectory()
+        if selected:
+            target_var.set(selected)
 
     def refresh():
         snapshot = serialize_context(context)
@@ -54,16 +59,23 @@ def make_tab(parent, context: AppContext):
         if not directory:
             return
         out_path = Path(directory)
-        exporter.export_radio_data(context, out_path)
-        exporter.export_recorded_media(context, out_path)
+        media_root = out_path / "media"
+        radio_dir = media_root / "radio"
+        recorded_dir = media_root / "lua" / "shared" / "RecordedMedia"
+        translation_dir = media_root / "lua" / "shared" / "Translate" / "EN"
+        radio_dir.mkdir(parents=True, exist_ok=True)
+        recorded_dir.mkdir(parents=True, exist_ok=True)
+        translation_dir.mkdir(parents=True, exist_ok=True)
+        exporter.export_radio_data(context, radio_dir)
+        exporter.export_recorded_media(context, recorded_dir, translation_dir)
         status_var.set(f"Exported files to {directory}")
-        preview.insert(tk.END, f"\nExported radio and recorded media to {directory}")
+        preview.insert(tk.END, f"\nExported radio and recorded media under {media_root}")
 
     def export_mod():
         output_dir = Path(mod_output_var.get() or ".")
         metadata = modpack.ModMetadata(
-            mod_id=mod_id_var.get() or "survivor_signal_reboot",
-            name=mod_name_var.get() or "Survivor Signal Reboot",
+            mod_id=mod_id_var.get() or "azamediamanager",
+            name=mod_name_var.get() or "Aza's Media Manager",
             version=mod_version_var.get() or "1.0",
             description=mod_description_var.get(),
             thumbnail=Path(mod_thumbnail_var.get()) if mod_thumbnail_var.get() else None,

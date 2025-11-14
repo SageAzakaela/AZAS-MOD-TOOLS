@@ -1,10 +1,11 @@
 {
-  "pz_base_path": "D:\\SteamLibrary\\steamapps\\common\\ProjectZomboid",
+  "pz_base_path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\ProjectZomboid",
   "auto_load_vanilla": false,
   "transcript_line_limit": 180,
   "ai_api_key": "",
   "typewriter_sound_enabled": true,
   "last_recorded_path": "D:\\_SURVIVOR RADIO 4\\OTHER TOOLS\\WORD_ED_FORK\\WORDZED\\survivor-signal-reboot\\VanillaFiles\\recorded_media.lua",
-  "last_translation_path": "C:/Program Files (x86)/Steam/steamapps/common/ProjectZomboid/media/lua/shared/Translate/EN/Recorded_Media_EN.txt",
-  "show_ai_tab": true
+  "last_translation_path": "D:\\_SURVIVOR RADIO 4\\OTHER TOOLS\\WORD_ED_FORK\\WORDZED\\survivor-signal-reboot\\VanillaFiles\\Recorded_Media_EN.txt",
+  "show_ai_tab": true,
+  "pz_configured": true
 }
