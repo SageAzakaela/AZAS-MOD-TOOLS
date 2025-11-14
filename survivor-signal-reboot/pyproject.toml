@@ -1,0 +1,17 @@
+[project]
+name = "survivor-signal-reboot"
+version = "0.1.0"
+description = "Survivor Signal Reboot - media design app for Project Zomboid"
+readme = "README.md"
+authors = ["Survivor Radio Modder <survivor@example.com>"]
+requires-python = ">=3.10"
+
+[project.dependencies]
+requests = ">=2.32"
+
+[project.optional-dependencies]
+ui = ["customtkinter>=5.5.0"]
+
+[build-system]
+requires = ["setuptools>=65.5.1"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,33 @@
+from . import (
+    assistant_tab,
+    adverts_tab,
+    channels_tab,
+    cds_tab,
+    config_tab,
+    cassettes_tab,
+    planning_tab,
+    radio_tab,
+    recorded_tab,
+    search_tab,
+    tv_tab,
+    vhs_tab,
+    voices_tab,
+    export_tab,
+)
+
+__all__ = [
+    "assistant_tab",
+    "adverts_tab",
+    "channels_tab",
+    "cds_tab",
+    "config_tab",
+    "cassettes_tab",
+    "planning_tab",
+    "radio_tab",
+    "recorded_tab",
+    "search_tab",
+    "tv_tab",
+    "vhs_tab",
+    "voices_tab",
+    "export_tab",
+]

@@ -1,0 +1,1201 @@
+{
+  "voices": [
+    {
+      "id": "voice_1",
+      "name": "Erin Fontaine",
+      "color": "#ff66c4",
+      "notes": "Main Character Eneergy",
+      "groups": [],
+      "channel_hint": null
+    },
+    {
+      "id": "voice_2",
+      "name": "Echo 7",
+      "color": "#ffd7ff",
+      "notes": "Static Entity of unknown origin.",
+      "groups": [],
+      "channel_hint": null
+    }
+  ],
+  "broadcasts": [
+    {
+      "id": "erin_begin",
+      "title": "Erin Begin",
+      "description": "Erin first appears on the broadcast.",
+      "lines": [
+        {
+          "text": "Hey there.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "0bf8123a5aea44d487fc1f38c25d15f7"
+        },
+        {
+          "text": "...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "91a9e2c2916b44d3ab18814ab72a2e68"
+        },
+        {
+          "text": "It's nice.  To see you again.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "b2bd1484302c40f1a97b90ff136c27a5"
+        },
+        {
+          "text": "I wonder how you migh have felt all this time I've been away.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "5f24ef7e0c804ce887cb7c5194140196"
+        },
+        {
+          "text": "...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "96ece54dafd1488ca271fa304025bd3f"
+        },
+        {
+          "text": "Well, actually, I never left.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "b5ac5788f7c44d618fe59ad6b8af6b26"
+        },
+        {
+          "text": "...You just forgot about me.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "03bb6648802c43ea97b8db4498bd0daa"
+        },
+        {
+          "text": "Just like I wanted.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "10302f81d83d484d9f0e498f8c5e5e81"
+        },
+        {
+          "text": "And, hey, I don't blame you in the slightest.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "126b999af1aa4b4091e0788d07e387d1"
+        },
+        {
+          "text": "Why would I ever think to blame you?",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "903f969358d74abcb2ad187912183653"
+        },
+        {
+          "text": "You're just doing what you want to do.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "7dd8b829d4144050b986648262090df4"
+        },
+        {
+          "text": "You're just being who you are.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "5e2ea6e4135d40fe878be66c964b2de9"
+        },
+        {
+          "text": "And that's a good thing.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "f21da29fb60841878c3e0a750770d685"
+        },
+        {
+          "text": "Now.  If you find yourself here, you may be wondering if everything is truly as it seems.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "c7f49cc7175f4df49c06e1ded7070562"
+        },
+        {
+          "text": "*laughter*",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "883da9e4c3b344eba6c544996cd6b0b1"
+        },
+        {
+          "text": "I thought so.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "7314fd0b39454ea58d98fb76c8b45080"
+        },
+        {
+          "text": "Alright, I'm Erin Fontaine.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "55d44e1f39ca48b9bf9f099ee4e124cc"
+        },
+        {
+          "text": "I'll be here...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "dc0e2076209c4d5785b8e338e34c4530"
+        },
+        {
+          "text": "Forever.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "2f96d680e07d4a72b783844e1b1a688f"
+        },
+        {
+          "text": "And that's totally fine.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "5d86d42be1d349fa9d3730f6547a3ed0"
+        }
+      ],
+      "start_offset": 0.0,
+      "effects": [],
+      "adverts": []
+    },
+    {
+      "id": "every_3_hours_",
+      "title": "Every 3 Hours?",
+      "description": "Erin ain't the same",
+      "lines": [
+        {
+          "text": "Oh, hey, it's you. You're back.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "8589cf8f893b46cbab9b2e5abaa63501"
+        },
+        {
+          "text": "It's really nice to see you again, honestly.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "7a95cd22265e4ca9ab83a4654bf97b99"
+        },
+        {
+          "text": "...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "09f36394c4a046bf810b42454c1c6894"
+        },
+        {
+          "text": "But, I wish the circumstances where different.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "4fc0efa03ebb46e7a6e530beeb746d51"
+        },
+        {
+          "text": "You might remember who I was before.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "5da085b84ba34b9db9dc87cf43f8a826"
+        },
+        {
+          "text": "I remember.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "dda49e0ddf2041e7a1dce32b9e7473d9"
+        },
+        {
+          "text": "I remember who I was before that too.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "caf82f67222c441eb0019fe6e0222e72"
+        },
+        {
+          "text": "And before that.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "8a72bb4f720c405dbbb971313b61dbe7"
+        },
+        {
+          "text": "And before even that!",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "5d8a6d50b2864039a56cf5ab578b533d"
+        },
+        {
+          "text": "*laughter*",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "69995507add34b6d9feb389d07718774"
+        },
+        {
+          "text": "But, ya know, I think it actually might not be so much the past,",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "3483ae17a0dc44cbb85f094937a1074d"
+        },
+        {
+          "text": "as it may be...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "fa2cc8dd02ab4b059c06c416f53f7062"
+        },
+        {
+          "text": "A different kind of future.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "5e468a4ff4dd4f34af3440f8636c72af"
+        },
+        {
+          "text": "...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "3348093bfcfb4193b2beb187169cbda7"
+        },
+        {
+          "text": "The past never changes -- But I'm loking at something...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "3dcf02b07e96469eb51f83ba63ffc8fd"
+        },
+        {
+          "text": "Where I've already gone, because I am destined to go there.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "861dec64776b48f1977c2f6aa190055a"
+        },
+        {
+          "text": "...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "521c20506fbc429b80c5ee5f65e1086f"
+        },
+        {
+          "text": "It's hard to make you understand.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "049b2b3faee24c12a626e87a925a62b5"
+        },
+        {
+          "text": "So you don't have to.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "de407f120d724201a422a7902d55a61e"
+        }
+      ],
+      "start_offset": 0.0,
+      "effects": [],
+      "adverts": []
+    },
+    {
+      "id": "erin_lets_it_out",
+      "title": "Erin lets it out",
+      "description": "",
+      "lines": [
+        {
+          "text": "Yeah, I'm still here.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "a92c8181e1d74ec296712583394e756b"
+        },
+        {
+          "text": "Just me.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "b3d3858affd84bb098e44d24d3fbe20f"
+        },
+        {
+          "text": "And me. And me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "0dcd9d54f5ef48ff8e31f1e266738876"
+        },
+        {
+          "text": "and me and me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "77e7ae72010e40dbb4960ff614648927"
+        },
+        {
+          "text": "And me. And me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "4d95fa194fbf4013aceb5e05efd4bd66"
+        },
+        {
+          "text": "and me and me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "a09d7950d8704c13aad66219755bc53f"
+        },
+        {
+          "text": "And me. And me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "bbc679bb542643549055a11246615c01"
+        },
+        {
+          "text": "and me and me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "6ee271f6127d464caed01c62f9245f38"
+        },
+        {
+          "text": "And me. And me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "7a3b90ecb31245c6ad0def5f651b3a24"
+        },
+        {
+          "text": "and me and me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "0550b9b693ff4846b3d904b7c2c4a5ac"
+        },
+        {
+          "text": "And me. And me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "b23ee6b3fb944ba8a62ad5755050c763"
+        },
+        {
+          "text": "and me and me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "afbf1abdb9e84b8cb6d4828d0b03f476"
+        },
+        {
+          "text": "And me. And me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "637cdef5ab8b423db8cd41b192d7eb25"
+        },
+        {
+          "text": "and me and me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "6746af385f084beaa592df797a3aba59"
+        },
+        {
+          "text": "And me. And me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "bd48a598b9b74cf291030731e1c14980"
+        },
+        {
+          "text": "and me and me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "804e8e2dcb624ca0927676102d7b1b84"
+        },
+        {
+          "text": "And me. And me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "43ca3b8817ee41e68d35db2bac03097a"
+        },
+        {
+          "text": "and me and me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "f78beb03481e4b35a23cf5980e754cdf"
+        },
+        {
+          "text": "And me. And me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "c3864bf9666a4bc3acb9419b6756b661"
+        },
+        {
+          "text": "and me and me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "6064f54d051549738a268a42187d9d1e"
+        },
+        {
+          "text": "And me. And me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "005f65b082604c63ab4d9e86e2c5dcef"
+        },
+        {
+          "text": "and me and me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "c0fd29a0eff64aabbcd5eb4940d74ef9"
+        },
+        {
+          "text": "And me. And me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "b68953a8853e41669b4ce2c9d1818aca"
+        },
+        {
+          "text": "and me and me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "7004b85aa49049c0ae164d757003fdbc"
+        },
+        {
+          "text": "And me. And me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "f3d24a45eaab440585008cded1111194"
+        },
+        {
+          "text": "and me and me and me and me and me...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "e006b14a103f4ac1bbf3eb4ae655cc0b"
+        },
+        {
+          "text": "*shaky breath*",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "29e6d504932842c88c03d1df760ac10c"
+        },
+        {
+          "text": "AND ME!!!",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "7d404f681be74a69a394aea451618ee5"
+        }
+      ],
+      "start_offset": 0.0,
+      "effects": [],
+      "adverts": []
+    },
+    {
+      "id": "erin_remembers_again",
+      "title": "Erin Remembers Again",
+      "description": "",
+      "lines": [
+        {
+          "text": "Hm...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "8e19e4b59da24cb4b2ae7904fed5c6ea"
+        },
+        {
+          "text": "Do you ever wonder why you're here?",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "aef08be93c554821ae8b94b750569013"
+        },
+        {
+          "text": "Or have you just come to accept it?",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "a6936b719fa2482080dd5f74635b82be"
+        },
+        {
+          "text": "I don't have to ask myself...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "be146535b6034b448ffbb989db15eb32"
+        },
+        {
+          "text": "\"Was it something I did?\"",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "f96613d33d7b42408e1b41da4f679f18"
+        },
+        {
+          "text": "\"...Something I said?\"",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "ae12b6feba224d78a70a0bc219da36e5"
+        },
+        {
+          "text": "I don't need to know anymore.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "1539cfe6285b4a29b4380bea7a13f7f2"
+        },
+        {
+          "text": "But I'll never not know.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "5151e901cac54d9c98e26e0ba806dcf0"
+        },
+        {
+          "text": "...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "fc73e880e8e24b81ace2dab910a578dd"
+        },
+        {
+          "text": "You want to know what happened at",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "08bf3ff82536419db26181da1aa7e8e0"
+        },
+        {
+          "text": "Echo Station?",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "cff6b638846d41a2ba8455884762e824"
+        },
+        {
+          "text": "You really want to know?",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "a27ce8ddb5bd4385bdb060a68f6a2abb"
+        },
+        {
+          "text": "...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "8bcab5a717b94e69a5fd3c95e37888b4"
+        },
+        {
+          "text": "Well. Fine.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "037fa21f931749edbf4771525bb7d1de"
+        },
+        {
+          "text": "Tune in tomorrow.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "51eca34a284548d4b920f56cd5a5e992"
+        },
+        {
+          "text": "Same time everyday. Every 3 hours.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "154317a7305d46f190f7bbcf9c6a523f"
+        }
+      ],
+      "start_offset": 0.0,
+      "effects": [],
+      "adverts": []
+    },
+    {
+      "id": "new_broadcast",
+      "title": "New Broadcast",
+      "description": "",
+      "lines": [],
+      "start_offset": 0.0,
+      "effects": [],
+      "adverts": []
+    },
+    {
+      "id": "new_broadcast_2",
+      "title": "New Broadcast",
+      "description": "",
+      "lines": [],
+      "start_offset": 0.0,
+      "effects": [],
+      "adverts": []
+    },
+    {
+      "id": "new_broadcast_3",
+      "title": "New Broadcast",
+      "description": "",
+      "lines": [
+        {
+          "text": "Welcome back.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "beef1e70d2d84250af256bdb10f0c367"
+        },
+        {
+          "text": "I'm sure you're enjoying this right now.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "b54f95b9b60d44fcb4eaac6078833ff4"
+        },
+        {
+          "text": "I'm sure you're having a blast.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "e831db1333954878bfd949445d709d87"
+        },
+        {
+          "text": "Surviving.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "b8538d329f9a48909f3aef272f14c6e5"
+        },
+        {
+          "text": "Enjoying the thrill of survival.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "5ff24171f3ae432ea192d944dfd09f6c"
+        },
+        {
+          "text": "Letting the urgency tap into a primal part of you",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "2e43e5b14d5b467da8171b660f66d606"
+        },
+        {
+          "text": "I should have told you yesterday.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "280fbf8f9906426ab4413299b40b6a44"
+        },
+        {
+          "text": "You really should aim to kill no less than 27 of those things.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "415b4be3721440bbbd4f02cbe501e1aa"
+        },
+        {
+          "text": "And if you already have?",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "5569ae781c2842aa88a736b90c748efd"
+        },
+        {
+          "text": "Heheh...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "3a1b543be7fd4c71b45c802209e28424"
+        },
+        {
+          "text": "Well, you may as well be fucked.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "77ea652a6f2d4b17940443c4a9f0c165"
+        },
+        {
+          "text": "Cuz I wasn't allowed to tell you yesterday.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "78647188740d4088a3a106aaa5e10aba"
+        },
+        {
+          "text": "That was part of the game.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "3db10c54acb14a4984c1b8e20cb00b76"
+        },
+        {
+          "text": "To test your nature.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "1cd1fb5923f34980acba1f386bcf5b00"
+        },
+        {
+          "text": "And I'll let you answer your own questions now.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "ec561a65961d4e69908645bd202e3ead"
+        },
+        {
+          "text": "...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "59ccbf8b1fb444b0a1d7128d991a6fe6"
+        },
+        {
+          "text": "As for what happened at Echo Station.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "ae31d85a4f934baf8a9779212ad25dcb"
+        },
+        {
+          "text": "... I killed Kyle for holding me at gunpoint.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "e4e035eafb5c4557891c5f0d795c9e9d"
+        },
+        {
+          "text": "I killed Kyle for being a pyschopath hell bent on torturing people.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "29fd95532c8c4a7f9b2a9486fa4c1f1d"
+        },
+        {
+          "text": "...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "a6c42bd3c9a0488cbab26a22634b876a"
+        },
+        {
+          "text": "He wanted to perform an autopsy for a dead world.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "bf1862b863f640f6ae104dfba370f8b2"
+        },
+        {
+          "text": "And that world was Penelope!",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "3c42ff38053a4042b6b38dc61df05c9a"
+        },
+        {
+          "text": "She didn't have to get bet, we were told that no one come to save us unless one of us volunteered to be bitten.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "b851a335264a4f2ca23ec4aea358e203"
+        },
+        {
+          "text": "We drew straws, but I had secretly cut them to all be the same length.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "53af6f794a9f44c7b722f0c71ab45811"
+        },
+        {
+          "text": "Kyle got pissed and said it was me or him...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "c18caed86b004f19ab009a820bab511b"
+        },
+        {
+          "text": "Penelope got frustrated.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "dd13a18043514f318aac648502575fbe"
+        },
+        {
+          "text": "She just gave up in that moment... I never saw her like that before.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "58cd7ee3aa914531a3136b76205477bc"
+        },
+        {
+          "text": "In all our years working together at the facility...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "bff808593c66496f9ac10a453a0591ce"
+        },
+        {
+          "text": "For the Alliance.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "7512259361de420a99ea4544282c0f51"
+        },
+        {
+          "text": "For a better All.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "6b97eadeccc140a48539a9700cbf5754"
+        },
+        {
+          "text": "For Ascension.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "c3701a0ed8db4a43881355ea500fdc8f"
+        },
+        {
+          "text": "None of it matters now.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "0a511a8097624f8a9373f64b88f434bf"
+        },
+        {
+          "text": "...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "581ffb4edbc7462aad31bde405d311df"
+        },
+        {
+          "text": "They abandoned us.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "c25dae54e7d54c5491f278165f7caae2"
+        },
+        {
+          "text": "But, then again, I never died.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "f3d187b0bd8247a7b04cba34fc84c330"
+        },
+        {
+          "text": "Kyle Shot me that day when I stabbed him,",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "6cfe7857a2b74633b106b89b27015e5e"
+        },
+        {
+          "text": "I barely had an energy to do anything but cry.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "8bd89cd82bc94edc8f71c7fefc278fa6"
+        },
+        {
+          "text": "With the lost ounce of breath, I set myself up to set up the music once more, on loop till the power at the facility ran out.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "6b55c32a5b0944769c72f01862811cd7"
+        },
+        {
+          "text": "Then. I died.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "43dd46498f084b5eb1e9897cd454878a"
+        },
+        {
+          "text": "...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "b006b8a73f3447de98641c50246f62af"
+        },
+        {
+          "text": "Yeah... Trippy.  I know.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "8dccd0e02e954ca5b3d6a28e90c4e45c"
+        },
+        {
+          "text": "But I've done it before.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "37f336cfc67944f7aea05a83f9367c31"
+        },
+        {
+          "text": "...",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "a12cdd705ecc45fa9659043f282bb4b3"
+        },
+        {
+          "text": "And I'll do it again.",
+          "voice": "voice_1",
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "68cdd6581a9f4feeaa305e03bd536c34"
+        }
+      ],
+      "start_offset": 0.0,
+      "effects": [],
+      "adverts": []
+    },
+    {
+      "id": "echo_7_madness",
+      "title": "Echo 7 Madness",
+      "description": "",
+      "lines": [
+        {
+          "text": "<krzzzlll>",
+          "voice": null,
+          "duration": null,
+          "moodle": null,
+          "effects": [],
+          "guid": "cfd9c8c1031f46e0a0d9f65a579d3305"
+        }
+      ],
+      "start_offset": 0.0,
+      "effects": [],
+      "adverts": []
+    }
+  ],
+  "channels": [
+    {
+      "id": "channel-1",
+      "name": "By Immortal Will",
+      "frequency": 88800.0,
+      "category": "radio",
+      "schedule": [
+        {
+          "broadcast_id": "erin_begin",
+          "day": 0,
+          "start": 0,
+          "end": 10800
+        },
+        {
+          "broadcast_id": "every_3_hours_",
+          "day": 0,
+          "start": 10800,
+          "end": 12600
+        },
+        {
+          "broadcast_id": "erin_lets_it_out",
+          "day": 0,
+          "start": 12600,
+          "end": 14400
+        },
+        {
+          "broadcast_id": "erin_remembers_again",
+          "day": 0,
+          "start": 14400,
+          "end": 16200
+        },
+        {
+          "broadcast_id": "new_broadcast",
+          "day": 0,
+          "start": 16200,
+          "end": 18000
+        },
+        {
+          "broadcast_id": "new_broadcast_2",
+          "day": 0,
+          "start": 18000,
+          "end": 19800
+        },
+        {
+          "broadcast_id": "new_broadcast_3",
+          "day": 0,
+          "start": 0.0,
+          "end": 23400.0
+        }
+      ],
+      "auto_adverts": false,
+      "default_advert_group": "",
+      "start_script": "main"
+    },
+    {
+      "id": "channel-2",
+      "name": "Static",
+      "frequency": 203.0,
+      "category": "television",
+      "schedule": [
+        {
+          "broadcast_id": "echo_7_madness",
+          "day": 0,
+          "start": 0,
+          "end": 1800
+        }
+      ],
+      "auto_adverts": false,
+      "default_advert_group": "",
+      "start_script": "main"
+    }
+  ],
+  "vhs_tapes": [],
+  "cds": [],
+  "recorded_media": [],
+  "active_channel": "channel-2",
+  "active_broadcast": "echo_7_madness"
+}

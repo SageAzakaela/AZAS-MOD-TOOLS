@@ -1,0 +1,64 @@
+<RadioData>
+  <RootInfo>
+    <SourceFile>SurvivorSignalReboot</SourceFile>
+    <FileGUID>00000000-0000-0000-0000-000000000000</FileGUID>
+    <Version>1</Version>
+  </RootInfo>
+  <Voices>
+    <VoiceEntry ID="voice_echo">
+      <FinalColor r="255" g="102" b="196" />
+    </VoiceEntry>
+    <VoiceEntry ID="3195b8db-c963-47b0-88e1-fcfa7adf69b8">
+      <FinalColor r="255" g="192" b="0" />
+    </VoiceEntry>
+    <VoiceEntry ID="7567470d-5e08-4398-bf2a-51fff3e5a4d3">
+      <FinalColor r="0" g="176" b="80" />
+    </VoiceEntry>
+    <VoiceEntry ID="cec5a610-52f5-48f6-9f25-ca116c3dce9a">
+      <FinalColor r="128" g="128" b="255" />
+    </VoiceEntry>
+    <VoiceEntry ID="281cc7d6-606b-4ea4-8ea7-de6a09557241">
+      <FinalColor r="255" g="0" b="0" />
+    </VoiceEntry>
+    <VoiceEntry ID="95457547-d23e-4e48-9a7d-397d64dc6609">
+      <FinalColor r="0" g="0" b="0" />
+    </VoiceEntry>
+    <VoiceEntry ID="961b0970-3060-416c-a34e-2dc6af7c8b01">
+      <FinalColor r="0" g="176" b="240" />
+    </VoiceEntry>
+    <VoiceEntry ID="c10a7626-39b7-4fb6-a4f7-f10fb01d0304">
+      <FinalColor r="255" g="0" b="255" />
+    </VoiceEntry>
+    <VoiceEntry ID="9a0a564e-5f7c-4ca3-890b-ecb6c50cfff7">
+      <FinalColor r="255" g="255" b="0" />
+    </VoiceEntry>
+    <VoiceEntry ID="43464a2d-4fa6-4198-82db-d10c53642296">
+      <FinalColor r="40" g="40" b="40" />
+    </VoiceEntry>
+    <VoiceEntry ID="51c7564c-4658-4913-97a9-f75400dbcae0">
+      <FinalColor r="255" g="204" b="0" />
+    </VoiceEntry>
+    <VoiceEntry ID="echo">
+      <FinalColor r="255" g="102" b="196" />
+    </VoiceEntry>
+  </Voices>
+  <Channels>
+    <ChannelEntry ID="rad-channel-01" name="Harbor Radio" cat="Radio" freq="9410" startscript="main">
+      <BroadcastEntry ID="broadcast-welcome" timestamp="0" endstamp="0" type="ActivateBroadcast" day="0" advertCat="rad-channel-01" isSegment="false">
+        <LineEntry ID="9b0cd360394b4e34b3d0649984858902" r="255" g="102" b="196" codes="static">Welcome to Harbor Radio's new survival update.</LineEntry>
+      </BroadcastEntry>
+    </ChannelEntry>
+    <ChannelEntry ID="68775c28-19e1-4737-9ba5-ce681d15f52d" name="LBMW - Kentucky Radio" cat="Radio" freq="93200" startscript="main" />
+    <ChannelEntry ID="50fff513-f439-409f-b3f0-5f0ac62d6fb1" name="NNR Radio" cat="Radio" freq="98000" startscript="main" />
+    <ChannelEntry ID="f259242a-38bf-4b4a-bab3-b389591fad35" name="KnoxTalk Radio" cat="Radio" freq="101200" startscript="main" />
+    <ChannelEntry ID="4d59ad8e-dcde-49d9-a6c9-cf0e6beb0399" name="Hitz FM" cat="Radio" freq="89400" startscript="main" />
+    <ChannelEntry ID="0aadc2e0-4612-4c0a-a3ad-1f1518e7d18d" name="Triple-N" cat="Television" freq="200" startscript="main" />
+    <ChannelEntry ID="3c967105-cbc3-4907-bb49-26968d99e451" name="WBLN News" cat="Television" freq="200" startscript="main" />
+    <ChannelEntry ID="9f7e57f1-461c-4600-a8a1-0f5d2ee27889" name="Life and Living TV" cat="Television" freq="202" startscript="main" />
+    <ChannelEntry ID="502e5991-cb16-4513-b80b-07e048e32a36" name="TURBO" cat="Television" freq="204" startscript="main" />
+    <ChannelEntry ID="56f6116d-83ff-41e3-b21f-9490646c6e01" name="PawsTV" cat="Television" freq="204" startscript="main" />
+    <ChannelEntry ID="ea0dd044-cefa-4463-b06b-73f133c1ebaf" name="Civilian Radio" cat="Amateur" freq="91200" startscript="main" />
+    <ChannelEntry ID="d1915795-be10-4803-9ac2-81f38648779b" name="Unknown Frequency" cat="Amateur" freq="107600" startscript="main" />
+    <ChannelEntry ID="82017c87-54ef-4639-bc4e-bd067f3dc0c2" name="Classified M1A1" cat="Military" freq="95000" startscript="main" />
+  </Channels>
+</RadioData>

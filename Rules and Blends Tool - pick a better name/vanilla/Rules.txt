@@ -1,0 +1,2429 @@
+version = 1
+
+alias
+{
+    name = empty
+    tiles = [
+        invisible_01_0
+    ]
+}
+
+alias
+{
+    name = lightgrass_n
+    tiles = [
+        blends_natural_01_56
+        blends_natural_01_60
+    ]
+}
+alias
+{
+    name = lightgrass_w
+    tiles = [
+        blends_natural_01_57
+        blends_natural_01_61
+    ]
+}
+alias
+{
+    name = lightgrass_e
+    tiles = [
+        blends_natural_01_58
+        blends_natural_01_62
+    ]
+}
+alias
+{
+    name = lightgrass_s
+    tiles = [
+        blends_natural_01_59
+        blends_natural_01_63
+    ]
+}
+alias
+{
+    name = medgrass_n
+    tiles = [
+        blends_natural_01_40
+        blends_natural_01_44
+    ]
+}
+alias
+{
+    name = medgrass_w
+    tiles = [
+        blends_natural_01_41
+        blends_natural_01_45
+    ]
+}
+alias
+{
+    name = medgrass_e
+    tiles = [
+        blends_natural_01_42
+        blends_natural_01_46
+    ]
+}
+alias
+{
+    name = medgrass_s
+    tiles = [
+        blends_natural_01_43
+        blends_natural_01_47
+    ]
+}
+alias
+{
+    name = darkgrass_n
+    tiles = [
+        blends_natural_01_24
+        blends_natural_01_28
+    ]
+}
+alias
+{
+    name = darkgrass_w
+    tiles = [
+        blends_natural_01_25
+        blends_natural_01_29
+    ]
+}
+alias
+{
+    name = darkgrass_e
+    tiles = [
+        blends_natural_01_26
+        blends_natural_01_30
+    ]
+}
+alias
+{
+    name = darkgrass_s
+    tiles = [
+        blends_natural_01_27
+        blends_natural_01_31
+    ]
+}
+alias
+{
+    name = sand_n
+    tiles = [
+        blends_natural_01_8
+        blends_natural_01_12
+    ]
+}
+alias
+{
+    name = sand_w
+    tiles = [
+        blends_natural_01_9
+        blends_natural_01_13
+    ]
+}
+alias
+{
+    name = sand_e
+    tiles = [
+        blends_natural_01_10
+        blends_natural_01_14
+    ]
+}
+alias
+{
+    name = sand_s
+    tiles = [
+        blends_natural_01_11
+        blends_natural_01_15
+    ]
+}
+alias
+{
+    name = medlonggrass
+    tiles = [
+        blends_grassoverlays_01_24
+        blends_grassoverlays_01_25
+        blends_grassoverlays_01_26
+        blends_grassoverlays_01_27
+        blends_grassoverlays_01_28
+        blends_grassoverlays_01_29
+    ]
+}
+alias
+{
+    name = medmedgrass
+    tiles = [
+        blends_grassoverlays_01_32
+        blends_grassoverlays_01_33
+        blends_grassoverlays_01_34
+        blends_grassoverlays_01_35
+        blends_grassoverlays_01_36
+        blends_grassoverlays_01_37
+    ]
+}
+alias
+{
+    name = medshortgrass
+    tiles = [
+        blends_grassoverlays_01_40
+        blends_grassoverlays_01_41
+        blends_grassoverlays_01_42
+        blends_grassoverlays_01_43
+        blends_grassoverlays_01_44
+        blends_grassoverlays_01_45
+    ]
+}
+alias
+{
+    name = lightlonggrass
+    tiles = [
+        blends_grassoverlays_01_48
+        blends_grassoverlays_01_49
+        blends_grassoverlays_01_50
+        blends_grassoverlays_01_51
+        blends_grassoverlays_01_52
+        blends_grassoverlays_01_53
+    ]
+}
+alias
+{
+    name = lightmedgrass
+    tiles = [
+        blends_grassoverlays_01_56
+        blends_grassoverlays_01_57
+        blends_grassoverlays_01_58
+        blends_grassoverlays_01_59
+        blends_grassoverlays_01_60
+        blends_grassoverlays_01_61
+    ]
+}
+alias
+{
+    name = lightshortgrass
+    tiles = [
+        blends_grassoverlays_01_64
+        blends_grassoverlays_01_65
+        blends_grassoverlays_01_66
+        blends_grassoverlays_01_67
+        blends_grassoverlays_01_68
+        blends_grassoverlays_01_69
+    ]
+}
+alias
+{
+    name = darklonggrass
+    tiles = [
+        blends_grassoverlays_01_0
+        blends_grassoverlays_01_1
+        blends_grassoverlays_01_2
+        blends_grassoverlays_01_3
+        blends_grassoverlays_01_4
+        blends_grassoverlays_01_5
+    ]
+}
+alias
+{
+    name = darkmedgrass
+    tiles = [
+        blends_grassoverlays_01_8
+        blends_grassoverlays_01_9
+        blends_grassoverlays_01_10
+        blends_grassoverlays_01_11
+        blends_grassoverlays_01_12
+        blends_grassoverlays_01_13
+    ]
+}
+alias
+{
+    name = darkshortgrass
+    tiles = [
+        blends_grassoverlays_01_16
+        blends_grassoverlays_01_17
+        blends_grassoverlays_01_18
+        blends_grassoverlays_01_19
+        blends_grassoverlays_01_20
+        blends_grassoverlays_01_21
+    ]
+}
+alias
+{
+    name = street
+    tiles = [
+        blends_street_01_96
+        blends_street_01_101
+        blends_street_01_102
+        blends_street_01_103
+    ]
+}
+alias
+{
+    name = street2
+    tiles = [
+        blends_street_01_80
+        blends_street_01_85
+        blends_street_01_86
+        blends_street_01_87
+    ]
+}
+alias
+{
+    name = lightgravel
+    tiles = [
+        blends_street_01_48
+        blends_street_01_53
+        blends_street_01_54
+        blends_street_01_55
+    ]
+}
+alias
+{
+    name = pothole
+    tiles = [
+        blends_street_01_16
+        blends_street_01_21
+    ]
+}
+alias
+{
+    name = dirt
+    tiles = [
+        blends_natural_01_64
+        blends_natural_01_69
+        blends_natural_01_70
+        blends_natural_01_71
+    ]
+}
+alias
+{
+    name = dirtgrass
+    tiles = [
+        blends_natural_01_80
+        blends_natural_01_85
+        blends_natural_01_86
+        blends_natural_01_87
+    ]
+}
+alias
+{
+    name = sand
+    tiles = [
+        blends_natural_01_0
+        blends_natural_01_5
+        blends_natural_01_6
+        blends_natural_01_7
+    ]
+}
+alias
+{
+    name = sandblends
+    tiles = [
+        blends_natural_01_8
+        blends_natural_01_9
+        blends_natural_01_10
+        blends_natural_01_11
+        blends_natural_01_1
+        blends_natural_01_4
+        blends_natural_01_3
+        blends_natural_01_2
+    ]
+}
+alias
+{
+    name = darkgrassblends
+    tiles = [
+        blends_natural_01_24
+        blends_natural_01_25
+        blends_natural_01_26
+        blends_natural_01_27
+        blends_natural_01_17
+        blends_natural_01_20
+        blends_natural_01_19
+        blends_natural_01_18
+    ]
+}
+alias
+{
+    name = medgrassblends
+    tiles = [
+        blends_natural_01_40
+        blends_natural_01_41
+        blends_natural_01_42
+        blends_natural_01_43
+        blends_natural_01_33
+        blends_natural_01_36
+        blends_natural_01_35
+        blends_natural_01_34
+    ]
+}
+alias
+{
+    name = lightgrassblends
+    tiles = [
+        blends_natural_01_56
+        blends_natural_01_57
+        blends_natural_01_58
+        blends_natural_01_59
+        blends_natural_01_49
+        blends_natural_01_52
+        blends_natural_01_51
+        blends_natural_01_59
+    ]
+}
+alias
+{
+    name = darkgrass
+    tiles = [
+        blends_natural_01_16
+        blends_natural_01_21
+        blends_natural_01_22
+        blends_natural_01_23
+    ]
+}
+alias
+{
+    name = medgrass
+    tiles = [
+        blends_natural_01_32
+        blends_natural_01_37
+        blends_natural_01_38
+        blends_natural_01_39
+    ]
+}
+alias
+{
+    name = lightgrass
+    tiles = [
+        blends_natural_01_48
+        blends_natural_01_53
+        blends_natural_01_54
+        blends_natural_01_55
+    ]
+}
+alias
+{
+    name = water
+    tiles = [
+        blends_natural_02_0
+        blends_natural_02_5
+        blends_natural_02_6
+        blends_natural_02_7
+    ]
+}
+
+alias
+{
+    name = flowers_orange
+    tiles = [
+        d_plants_1_24
+        d_plants_1_25
+        d_plants_1_26
+        d_plants_1_27
+    ]
+}
+alias
+{
+    name = flowers_yellow
+    tiles = [
+        d_plants_1_28
+        d_plants_1_29
+        d_plants_1_30
+        d_plants_1_31
+    ]
+}
+alias
+{
+    name = flowers_pinklow
+    tiles = [
+        d_plants_1_36
+        d_plants_1_37
+        d_plants_1_38
+        d_plants_1_39
+    ]
+}
+alias
+{
+    name = flowers_tallpale
+    tiles = [
+        d_plants_1_40
+        d_plants_1_41
+        d_plants_1_42
+        d_plants_1_43
+        d_plants_1_44
+        d_plants_1_45
+        d_plants_1_46
+        d_plants_1_47
+    ]
+}
+alias
+{
+    name = flowers_purple
+    tiles = [
+        d_plants_1_48
+        d_plants_1_49
+        d_plants_1_50
+    ]
+}
+alias
+{
+    name = flowers_white
+    tiles = [
+        d_plants_1_51
+        d_plants_1_52
+    ]
+}
+alias
+{
+    name = flowers_tinywarm
+    tiles = [
+        d_plants_1_57
+        d_plants_1_58
+        d_plants_1_59
+    ]
+}
+alias
+{
+    name = flowers_tinycool
+    tiles = [
+        d_plants_1_60
+        d_plants_1_61
+        d_plants_1_62
+        d_plants_1_63
+    ]
+}
+alias
+{
+    name = leaves
+    tiles = [
+        d_floorleaves_1_0
+        d_floorleaves_1_1
+        d_floorleaves_1_2
+        d_floorleaves_1_3
+        d_floorleaves_1_4
+        d_floorleaves_1_5
+        d_floorleaves_1_6
+        d_floorleaves_1_7
+        d_floorleaves_1_8
+        d_floorleaves_1_9
+        d_floorleaves_1_10
+        d_floorleaves_1_11
+    ]
+}
+alias
+{
+    name = forestfloor_sprouts
+    tiles = [
+        d_generic_1_0
+        d_generic_1_1
+        d_generic_1_2
+        d_generic_1_3
+        d_generic_1_4
+        d_generic_1_5
+        d_generic_1_6
+        d_generic_1_7
+        d_floorleaves_1_0
+        d_floorleaves_1_1
+        d_floorleaves_1_2
+    ]
+}
+
+alias
+{
+    name = forestfloor_branches
+    tiles = [
+        d_generic_1_12
+        d_generic_1_13
+        d_generic_1_14
+        d_generic_1_15
+        d_generic_1_20
+        d_generic_1_21
+        d_generic_1_22
+        d_generic_1_23
+        d_floorleaves_1_0
+        d_floorleaves_1_3
+        d_floorleaves_1_4
+    ]
+}
+
+alias
+{
+    name = forestfloor_roots
+    tiles = [
+        d_generic_1_16
+        d_generic_1_17
+        d_generic_1_18
+        d_generic_1_19
+        d_generic_1_24
+        d_generic_1_25
+        d_floorleaves_1_5
+        d_floorleaves_1_6
+    ]
+}
+
+alias
+{
+    name = forestfloor_rocksduff
+    tiles = [
+        d_generic_1_8
+        d_generic_1_9
+        d_generic_1_10
+        d_generic_1_11
+        d_generic_1_26
+        d_generic_1_27
+        d_generic_1_28
+        d_generic_1_29
+        d_floorleaves_1_7
+        d_floorleaves_1_8
+    ]
+}
+
+alias
+{
+    name = forestfloor_lowferns
+    tiles = [
+        d_generic_1_48
+        d_generic_1_49
+        d_generic_1_50
+        d_generic_1_51
+        d_generic_1_52
+        d_generic_1_53
+        d_generic_1_54
+        d_generic_1_55
+        d_floorleaves_1_9
+        d_floorleaves_1_10
+    ]
+}
+
+alias
+{
+    name = forestfloor_twigs
+    tiles = [
+        d_generic_1_32
+        d_generic_1_33
+        d_generic_1_34
+        d_generic_1_35
+        d_generic_1_36
+        d_generic_1_37
+        d_generic_1_38
+        d_generic_1_39
+        d_floorleaves_1_11
+    ]
+}
+
+alias
+{
+    name = forestfloor_scatter
+    tiles = [
+        d_generic_1_40
+        d_generic_1_41
+        d_generic_1_42
+        d_generic_1_43
+        d_generic_1_44
+        d_generic_1_45
+        d_generic_1_46
+        d_generic_1_47
+        d_floorleaves_1_10
+        d_floorleaves_1_9
+        d_floorleaves_1_8
+    ]
+}
+
+alias
+{
+    name = forestfloor_deep
+    tiles = [
+        d_generic_1_48
+        d_generic_1_49
+        d_generic_1_50
+        d_generic_1_51
+        d_generic_1_52
+        d_generic_1_53
+        d_generic_1_54
+        d_generic_1_55
+        d_generic_1_20
+        d_generic_1_21
+        d_floorleaves_1_0
+        d_floorleaves_1_1
+    ]
+}
+
+
+
+
+
+rule
+{
+    label = Dark Grass
+    bitmap = 0
+    color = 90 100 35
+    tiles = darkgrass
+    layer = 0_Floor
+}
+rule
+{
+    label = Medium Grass
+    bitmap = 0
+    color = 117 117 47
+    tiles = medgrass
+    layer = 0_Floor
+}
+rule
+{
+    label = Light Grass
+    bitmap = 0
+    color = 145 135 60
+    tiles = lightgrass
+    layer = 0_Floor
+}
+rule
+{
+    label = Sand
+    bitmap = 0
+    color = 210 200 160
+    tiles = sand
+    layer = 0_Floor
+}
+rule
+{
+    label = Light Asphalt
+    bitmap = 0
+    color = 165 160 140
+    tiles = lightgravel
+    layer = 0_Floor
+}
+rule
+{
+    label = Dark Asphalt (main roads)
+    bitmap = 0
+    color = 100 100 100
+    tiles = street2
+    layer = 0_Floor
+}
+rule
+{
+    label = Medium Asphalt
+    bitmap = 0
+    color = 120 120 120
+    tiles = street
+    layer = 0_Floor
+}
+rule
+{
+    label = Gravel Dirt
+    bitmap = 0
+    color = 140 70 15
+    tiles = floors_exterior_natural_01_12
+    layer = 0_Floor
+}
+rule
+{
+    label = Dirt
+    bitmap = 0
+    color = 120 70 20
+    tiles = dirt
+    layer = 0_Floor
+}
+rule
+{
+    label = Dirt Grass
+    bitmap = 0
+    color = 80 55 20
+    tiles = dirtgrass
+    layer = 0_Floor
+}
+rule
+{
+    label = Dark Pothole
+    bitmap = 0
+    color = 110 100 100
+    tiles = blends_street_01_0
+    layer = 0_Floor
+}
+rule
+{
+    label = Light Pothole
+    bitmap = 0
+    color = 130 120 120
+    tiles = pothole
+    layer = 0_Floor
+}
+rule
+{
+    label = Water
+    bitmap = 0
+    color = 0 138 255
+    tiles = water
+    layer = 0_Floor
+}
+rule
+{
+    label = Trees
+    bitmap = 1
+    color = 255 0 0
+    tiles = [
+        vegetation_trees_01_8
+        vegetation_trees_01_9
+        vegetation_trees_01_10
+        vegetation_trees_01_11
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Dense Trees + Dark grass
+    bitmap = 1
+    color = 200 0 0
+    tiles = [
+        vegetation_trees_01_8
+        vegetation_trees_01_9
+        vegetation_trees_01_10
+        vegetation_trees_01_11
+        darklonggrass
+    ]
+    layer = 0_Vegetation
+    condition = 90 100 35
+}
+rule
+{
+    label = Dense Trees + Medium grass
+    bitmap = 1
+    color = 200 0 0
+    tiles = [
+        vegetation_trees_01_8
+        vegetation_trees_01_9
+        vegetation_trees_01_10
+        vegetation_trees_01_11
+        medlonggrass
+    ]
+    layer = 0_Vegetation
+    condition = 117 117 47
+}
+rule
+{
+    label = Dense Trees + Light grass
+    bitmap = 1
+    color = 200 0 0
+    tiles = [
+        vegetation_trees_01_8
+        vegetation_trees_01_9
+        vegetation_trees_01_10
+        vegetation_trees_01_11
+        lightlonggrass
+    ]
+    layer = 0_Vegetation
+    condition = 145 135 60
+}
+rule
+{
+    label = Trees + Dark grass
+    bitmap = 1
+    color = 127 0 0
+    tiles = [
+        vegetation_trees_01_8
+        vegetation_trees_01_9
+        vegetation_trees_01_10
+        vegetation_trees_01_11
+        darklonggrass
+        darklonggrass
+        darkmedgrass
+        darkshortgrass
+    ]
+    layer = 0_Vegetation
+    condition = 90 100 35
+}
+rule
+{
+    label = Trees + Medium grass
+    bitmap = 1
+    color = 127 0 0
+    tiles = [
+        vegetation_trees_01_8
+        vegetation_trees_01_9
+        vegetation_trees_01_10
+        vegetation_trees_01_11
+        medlonggrass
+        medlonggrass
+        medmedgrass
+        medshortgrass
+    ]
+    layer = 0_Vegetation
+    condition = 117 117 47
+}
+rule
+{
+    label = Trees + Light grass
+    bitmap = 1
+    color = 127 0 0
+    tiles = [
+        vegetation_trees_01_8
+        vegetation_trees_01_9
+        vegetation_trees_01_10
+        vegetation_trees_01_11
+        lightlonggrass
+        lightlonggrass
+        lightmedgrass
+        lightshortgrass
+    ]
+    layer = 0_Vegetation
+    condition = 145 135 60
+}
+rule
+{
+    label = Fir Trees + Dark grass
+    bitmap = 1
+    color = 64 0 0
+    tiles = [
+        vegetation_trees_01_8
+        vegetation_trees_01_9
+        darklonggrass
+        darklonggrass
+        darkmedgrass
+        darkshortgrass
+        darkmedgrass
+        darkshortgrass
+    ]
+    layer = 0_Vegetation
+    condition = 90 100 35
+}
+rule
+{
+    label = Fir Trees + Medium grass
+    bitmap = 1
+    color = 64 0 0
+    tiles = [
+        vegetation_trees_01_8
+        vegetation_trees_01_9
+        medlonggrass
+        medlonggrass
+        medmedgrass
+        medshortgrass
+        medmedgrass
+        medshortgrass
+    ]
+    layer = 0_Vegetation
+    condition = 117 117 47
+}
+rule
+{
+    label = Fir Trees + Light grass
+    bitmap = 1
+    color = 64 0 0
+    tiles = [
+        vegetation_trees_01_8
+        vegetation_trees_01_9
+        lightlonggrass
+        lightlonggrass
+        lightmedgrass
+        lightshortgrass
+        lightmedgrass
+        lightshortgrass
+    ]
+    layer = 0_Vegetation
+    condition = 145 135 60
+}
+rule
+{
+    label = Grass (all types)
+    bitmap = 1
+    color = 0 255 0
+    tiles = [
+        darklonggrass
+        darkmedgrass
+        darkshortgrass
+        darklonggrass
+        darkmedgrass
+        darkshortgrass
+        darklonggrass
+        darkmedgrass
+        darkshortgrass
+        vegetation_groundcover_01_18
+        vegetation_groundcover_01_19
+        vegetation_groundcover_01_21
+        vegetation_groundcover_01_22
+        vegetation_groundcover_01_23
+    ]
+    layer = 0_Vegetation
+    condition = 90 100 35
+}
+rule
+{
+    label = Light long grass
+    bitmap = 1
+    color = 0 255 0
+    tiles = [
+        lightshortgrass
+        lightmedgrass
+        lightlonggrass
+        lightshortgrass
+        lightmedgrass
+        lightlonggrass
+        lightshortgrass
+        lightmedgrass
+        lightlonggrass
+        vegetation_groundcover_01_18
+        vegetation_groundcover_01_19
+        vegetation_groundcover_01_21
+        vegetation_groundcover_01_22
+        vegetation_groundcover_01_23
+    ]
+    layer = 0_Vegetation
+    condition = 145 135 60
+}
+rule
+{
+    bitmap = 1
+    color = 0 255 0
+    tiles = [
+        medshortgrass
+        medmedgrass
+        medlonggrass
+        medshortgrass
+        medmedgrass
+        medlonggrass
+        medshortgrass
+        medmedgrass
+        medlonggrass
+        vegetation_groundcover_01_18
+        vegetation_groundcover_01_19
+        vegetation_groundcover_01_21
+        vegetation_groundcover_01_22
+        vegetation_groundcover_01_23
+    ]
+    layer = 0_Vegetation
+    condition = 117 117 47
+}
+rule
+{
+    label = Grass + Few Trees (dark)
+    bitmap = 1
+    color = 0 128 0
+    tiles = [
+        vegetation_trees_01_8
+        vegetation_trees_01_10
+        darklonggrass
+        darklonggrass
+        darkmedgrass
+        darkshortgrass
+        darklonggrass
+        darklonggrass
+        darklonggrass
+        darkmedgrass
+        darkmedgrass
+        vegetation_trees_01_8
+        vegetation_trees_01_10
+        darklonggrass
+        darklonggrass
+        darkmedgrass
+        darklonggrass
+        darklonggrass
+        darkmedgrass
+        vegetation_groundcover_01_18
+        vegetation_groundcover_01_19
+        vegetation_groundcover_01_21
+        vegetation_groundcover_01_22
+        vegetation_groundcover_01_23
+    ]
+    layer = 0_Vegetation
+    condition = 90 100 35
+}
+rule
+{
+    label = Grass + Few Trees (medium)
+    bitmap = 1
+    color = 0 128 0
+    tiles = [
+        vegetation_trees_01_8
+        vegetation_trees_01_10
+        medlonggrass
+        medlonggrass
+        medmedgrass
+        medshortgrass
+        medlonggrass
+        medlonggrass
+        medlonggrass
+        medmedgrass
+        medmedgrass
+        vegetation_trees_01_8
+        vegetation_trees_01_10
+        medlonggrass
+        medlonggrass
+        medmedgrass
+        medlonggrass
+        medlonggrass
+        medmedgrass
+        vegetation_groundcover_01_18
+        vegetation_groundcover_01_19
+        vegetation_groundcover_01_21
+        vegetation_groundcover_01_22
+        vegetation_groundcover_01_23
+    ]
+    layer = 0_Vegetation
+    condition = 117 117 47
+}
+rule
+{
+    label = Grass + Few Trees (light)
+    bitmap = 1
+    color = 0 128 0
+    tiles = [
+        vegetation_trees_01_8
+        vegetation_trees_01_10
+        lightlonggrass
+        lightlonggrass
+        lightmedgrass
+        lightshortgrass
+        lightlonggrass
+        lightlonggrass
+        lightlonggrass
+        lightmedgrass
+        lightmedgrass
+        vegetation_trees_01_8
+        vegetation_trees_01_10
+        lightlonggrass
+        lightlonggrass
+        lightmedgrass
+        lightlonggrass
+        lightlonggrass
+        lightmedgrass
+        vegetation_groundcover_01_18
+        vegetation_groundcover_01_19
+        vegetation_groundcover_01_21
+        vegetation_groundcover_01_22
+        vegetation_groundcover_01_23
+    ]
+    layer = 0_Vegetation
+    condition = 145 135 60
+}
+rule
+{
+    label = Bushes, Grass, Few Trees (dark)
+    bitmap = 1
+    color = 255 0 255
+    tiles = [
+        vegetation_foliage_01_8
+        vegetation_foliage_01_9
+        vegetation_foliage_01_10
+        vegetation_foliage_01_11
+        vegetation_foliage_01_12
+        vegetation_foliage_01_13
+        vegetation_foliage_01_14
+        vegetation_trees_01_8
+        vegetation_trees_01_9
+        vegetation_trees_01_10
+        vegetation_trees_01_11
+        darklonggrass
+        darklonggrass
+        darkmedgrass
+        darkshortgrass
+    ]
+    layer = 0_Vegetation
+    condition = 90 100 35
+}
+rule
+{
+    label = Bushes, Grass, Few Trees (medium)
+    bitmap = 1
+    color = 255 0 255
+    tiles = [
+        vegetation_foliage_01_8
+        vegetation_foliage_01_9
+        vegetation_foliage_01_10
+        vegetation_foliage_01_11
+        vegetation_foliage_01_12
+        vegetation_foliage_01_13
+        vegetation_foliage_01_14
+        vegetation_trees_01_8
+        vegetation_trees_01_9
+        vegetation_trees_01_10
+        vegetation_trees_01_11
+        medlonggrass
+        medlonggrass
+        medmedgrass
+        medshortgrass
+    ]
+    layer = 0_Vegetation
+    condition = 117 117 47
+}
+rule
+{
+    label = Bushes, Grass, Few Trees (light)
+    bitmap = 1
+    color = 255 0 255
+    tiles = [
+        vegetation_foliage_01_8
+        vegetation_foliage_01_9
+        vegetation_foliage_01_10
+        vegetation_foliage_01_11
+        vegetation_foliage_01_12
+        vegetation_foliage_01_13
+        vegetation_foliage_01_14
+        vegetation_trees_01_8
+        vegetation_trees_01_9
+        vegetation_trees_01_10
+        vegetation_trees_01_11
+        lightlonggrass
+        lightlonggrass
+        lightmedgrass
+        lightshortgrass
+    ]
+    layer = 0_Vegetation
+    condition = 145 135 60
+}
+
+rule
+{
+    label = Fallen Leaves (Dense)
+    bitmap = 1
+    color = 200 80 20
+    tiles = [
+        leaves
+        leaves
+        leaves
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Fallen Leaves (Medium)
+    bitmap = 1
+    color = 205 95 35
+    tiles = [
+        leaves
+        leaves
+        empty
+        leaves
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Fallen Leaves (Sparse)
+    bitmap = 1
+    color = 210 110 50
+    tiles = [
+        leaves
+        empty
+        empty
+        leaves
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Forest Floor – Sprouts (Dense)
+    bitmap = 1
+    color = 10 60 60
+    tiles = [
+        forestfloor_sprouts
+        forestfloor_sprouts
+        forestfloor_sprouts
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Sprouts (Medium)
+    bitmap = 1
+    color = 12 65 62
+    tiles = [
+        forestfloor_sprouts
+        forestfloor_sprouts
+        empty
+        forestfloor_sprouts
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Sprouts (Sparse)
+    bitmap = 1
+    color = 14 70 64
+    tiles = [
+        forestfloor_sprouts
+        empty
+        empty
+        forestfloor_sprouts
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Forest Floor – Fallen Branches (Dense)
+    bitmap = 1
+    color = 12 70 65
+    tiles = [
+        forestfloor_branches
+        forestfloor_branches
+        forestfloor_branches
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Fallen Branches (Medium)
+    bitmap = 1
+    color = 14 75 67
+    tiles = [
+        forestfloor_branches
+        forestfloor_branches
+        empty
+        forestfloor_branches
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Fallen Branches (Sparse)
+    bitmap = 1
+    color = 16 80 69
+    tiles = [
+        forestfloor_branches
+        empty
+        empty
+        forestfloor_branches
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Forest Floor – Roots & Shoots (Dense)
+    bitmap = 1
+    color = 14 80 70
+    tiles = [
+        forestfloor_roots
+        forestfloor_roots
+        forestfloor_roots
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Roots & Shoots (Medium)
+    bitmap = 1
+    color = 16 85 72
+    tiles = [
+        forestfloor_roots
+        forestfloor_roots
+        empty
+        forestfloor_roots
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Roots & Shoots (Sparse)
+    bitmap = 1
+    color = 18 90 74
+    tiles = [
+        forestfloor_roots
+        empty
+        empty
+        forestfloor_roots
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Forest Floor – Rocks & Duff (Dense)
+    bitmap = 1
+    color = 16 90 75
+    tiles = [
+        forestfloor_rocksduff
+        forestfloor_rocksduff
+        forestfloor_rocksduff
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Rocks & Duff (Medium)
+    bitmap = 1
+    color = 18 95 77
+    tiles = [
+        forestfloor_rocksduff
+        forestfloor_rocksduff
+        empty
+        forestfloor_rocksduff
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Rocks & Duff (Sparse)
+    bitmap = 1
+    color = 20 100 79
+    tiles = [
+        forestfloor_rocksduff
+        empty
+        empty
+        forestfloor_rocksduff
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Forest Floor – Low Ferns (Dense)
+    bitmap = 1
+    color = 18 100 80
+    tiles = [
+        forestfloor_lowferns
+        forestfloor_lowferns
+        forestfloor_lowferns
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Low Ferns (Medium)
+    bitmap = 1
+    color = 20 105 82
+    tiles = [
+        forestfloor_lowferns
+        forestfloor_lowferns
+        empty
+        forestfloor_lowferns
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Low Ferns (Sparse)
+    bitmap = 1
+    color = 22 110 84
+    tiles = [
+        forestfloor_lowferns
+        empty
+        empty
+        forestfloor_lowferns
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Forest Floor – Twigs (Dense)
+    bitmap = 1
+    color = 20 110 85
+    tiles = [
+        forestfloor_twigs
+        forestfloor_twigs
+        forestfloor_twigs
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Twigs (Medium)
+    bitmap = 1
+    color = 22 115 87
+    tiles = [
+        forestfloor_twigs
+        forestfloor_twigs
+        empty
+        forestfloor_twigs
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Twigs (Sparse)
+    bitmap = 1
+    color = 24 120 89
+    tiles = [
+        forestfloor_twigs
+        empty
+        empty
+        forestfloor_twigs
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Forest Floor – Light Scatter (Dense)
+    bitmap = 1
+    color = 22 120 90
+    tiles = [
+        forestfloor_scatter
+        forestfloor_scatter
+        forestfloor_scatter
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Light Scatter (Medium)
+    bitmap = 1
+    color = 24 125 92
+    tiles = [
+        forestfloor_scatter
+        forestfloor_scatter
+        empty
+        forestfloor_scatter
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Light Scatter (Sparse)
+    bitmap = 1
+    color = 26 130 94
+    tiles = [
+        forestfloor_scatter
+        empty
+        empty
+        forestfloor_scatter
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Forest Floor – Deep Layer (Dense)
+    bitmap = 1
+    color = 24 130 95
+    tiles = [
+        forestfloor_deep
+        forestfloor_deep
+        forestfloor_deep
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Deep Layer (Medium)
+    bitmap = 1
+    color = 26 135 97
+    tiles = [
+        forestfloor_deep
+        forestfloor_deep
+        empty
+        forestfloor_deep
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Forest Floor – Deep Layer (Sparse)
+    bitmap = 1
+    color = 28 140 99
+    tiles = [
+        forestfloor_deep
+        empty
+        empty
+        forestfloor_deep
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Flowers – Orange (Dense)
+    bitmap = 1
+    color = 35 130 90
+    tiles = [
+        flowers_orange
+        flowers_orange
+        flowers_orange
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – Orange (Medium)
+    bitmap = 1
+    color = 37 135 95
+    tiles = [
+        flowers_orange
+        flowers_orange
+        empty
+        flowers_orange
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – Orange (Sparse)
+    bitmap = 1
+    color = 39 140 100
+    tiles = [
+        flowers_orange
+        empty
+        empty
+        flowers_orange
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Flowers – Yellow (Dense)
+    bitmap = 1
+    color = 41 145 100
+    tiles = [
+        flowers_yellow
+        flowers_yellow
+        flowers_yellow
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – Yellow (Medium)
+    bitmap = 1
+    color = 43 150 105
+    tiles = [
+        flowers_yellow
+        flowers_yellow
+        empty
+        flowers_yellow
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – Yellow (Sparse)
+    bitmap = 1
+    color = 45 155 110
+    tiles = [
+        flowers_yellow
+        empty
+        empty
+        flowers_yellow
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Flowers – Pink Low (Dense)
+    bitmap = 1
+    color = 47 160 115
+    tiles = [
+        flowers_pinklow
+        flowers_pinklow
+        flowers_pinklow
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – Pink Low (Medium)
+    bitmap = 1
+    color = 49 165 120
+    tiles = [
+        flowers_pinklow
+        flowers_pinklow
+        empty
+        flowers_pinklow
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – Pink Low (Sparse)
+    bitmap = 1
+    color = 51 170 125
+    tiles = [
+        flowers_pinklow
+        empty
+        empty
+        flowers_pinklow
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Flowers – Tall Pale (Dense)
+    bitmap = 1
+    color = 53 175 130
+    tiles = [
+        flowers_tallpale
+        flowers_tallpale
+        flowers_tallpale
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – Tall Pale (Medium)
+    bitmap = 1
+    color = 55 180 135
+    tiles = [
+        flowers_tallpale
+        flowers_tallpale
+        empty
+        flowers_tallpale
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – Tall Pale (Sparse)
+    bitmap = 1
+    color = 57 185 140
+    tiles = [
+        flowers_tallpale
+        empty
+        empty
+        flowers_tallpale
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Flowers – Purple (Dense)
+    bitmap = 1
+    color = 59 190 145
+    tiles = [
+        flowers_purple
+        flowers_purple
+        flowers_purple
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – Purple (Medium)
+    bitmap = 1
+    color = 61 195 150
+    tiles = [
+        flowers_purple
+        flowers_purple
+        empty
+        flowers_purple
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – Purple (Sparse)
+    bitmap = 1
+    color = 63 200 155
+    tiles = [
+        flowers_purple
+        empty
+        empty
+        flowers_purple
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Flowers – White (Dense)
+    bitmap = 1
+    color = 65 205 160
+    tiles = [
+        flowers_white
+        flowers_white
+        flowers_white
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – White (Medium)
+    bitmap = 1
+    color = 67 210 165
+    tiles = [
+        flowers_white
+        flowers_white
+        empty
+        flowers_white
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – White (Sparse)
+    bitmap = 1
+    color = 69 215 170
+    tiles = [
+        flowers_white
+        empty
+        empty
+        flowers_white
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Flowers – Tiny Warm (Dense)
+    bitmap = 1
+    color = 71 220 175
+    tiles = [
+        flowers_tinywarm
+        flowers_tinywarm
+        flowers_tinywarm
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – Tiny Warm (Medium)
+    bitmap = 1
+    color = 73 225 180
+    tiles = [
+        flowers_tinywarm
+        flowers_tinywarm
+        empty
+        flowers_tinywarm
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – Tiny Warm (Sparse)
+    bitmap = 1
+    color = 75 230 185
+    tiles = [
+        flowers_tinywarm
+        empty
+        empty
+        flowers_tinywarm
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Flowers – Tiny Cool (Dense)
+    bitmap = 1
+    color = 77 235 190
+    tiles = [
+        flowers_tinycool
+        flowers_tinycool
+        flowers_tinycool
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – Tiny Cool (Medium)
+    bitmap = 1
+    color = 79 240 195
+    tiles = [
+        flowers_tinycool
+        flowers_tinycool
+        empty
+        flowers_tinycool
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Flowers – Tiny Cool (Sparse)
+    bitmap = 1
+    color = 81 245 200
+    tiles = [
+        flowers_tinycool
+        empty
+        empty
+        flowers_tinycool
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+alias
+{
+    name = streettrash_papers
+    tiles = [
+        trash_01_24
+        trash_01_25
+        trash_01_26
+        trash_01_27
+        trash_01_28
+        trash_01_29
+        trash_01_30
+        trash_01_31
+    ]
+}
+
+alias
+{
+    name = streettrash_bulk
+    tiles = [
+        trash_01_16
+        trash_01_17
+        trash_01_18
+        trash_01_19
+        trash_01_20
+        trash_01_21
+        trash_01_22
+        trash_01_23
+    ]
+}
+
+alias
+{
+    name = streettrash_small
+    tiles = [
+        trash_01_0
+        trash_01_1
+        trash_01_2
+        trash_01_3
+        trash_01_4
+        trash_01_5
+        trash_01_6
+        trash_01_7
+        trash_01_8
+        trash_01_9
+        trash_01_10
+        trash_01_11
+        trash_01_12
+    ]
+}
+
+alias
+{
+    name = street_cracks_small
+    tiles = [
+        d_streetcracks_1_0
+        d_streetcracks_1_1
+        d_streetcracks_1_2
+        d_streetcracks_1_3
+        d_streetcracks_1_4
+        d_streetcracks_1_5
+        d_streetcracks_1_6
+        d_streetcracks_1_7
+        d_streetcracks_1_8
+        d_streetcracks_1_9
+        d_streetcracks_1_10
+        d_streetcracks_1_11
+    ]
+}
+alias
+{
+    name = street_cracks_med
+    tiles = [
+        d_streetcracks_1_24
+        d_streetcracks_1_25
+        d_streetcracks_1_26
+        d_streetcracks_1_27
+        d_streetcracks_1_28
+        d_streetcracks_1_29
+        d_streetcracks_1_30
+        d_streetcracks_1_31
+        d_streetcracks_1_32
+        d_streetcracks_1_33
+        d_streetcracks_1_34
+        d_streetcracks_1_35
+    ]
+}
+alias
+{
+    name = street_cracks_heavy
+    tiles = [
+        d_streetcracks_1_72
+        d_streetcracks_1_73
+        d_streetcracks_1_74
+        d_streetcracks_1_75
+        d_streetcracks_1_76
+        d_streetcracks_1_77
+        d_streetcracks_1_78
+        d_streetcracks_1_79
+        d_streetcracks_1_96
+        d_streetcracks_1_97
+        d_streetcracks_1_98
+        d_streetcracks_1_99
+    ]
+}
+
+alias
+{
+    name = blood_splatters
+    tiles = [
+        overlay_blood_floor_01_0
+        overlay_blood_floor_01_1
+        overlay_blood_floor_01_2
+        overlay_blood_floor_01_3
+        overlay_blood_floor_01_4
+        overlay_blood_floor_01_5
+        overlay_blood_floor_01_6
+        overlay_blood_floor_01_7
+        overlay_blood_floor_01_8
+        overlay_blood_floor_01_9
+        overlay_blood_floor_01_10
+    ]
+}
+
+rule
+{
+    label = Street Trash – Papers (Dense)
+    bitmap = 1
+    color = 140 100 70
+    tiles = [
+        streettrash_papers
+        streettrash_papers
+        streettrash_papers
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Street Trash – Papers (Medium)
+    bitmap = 1
+    color = 145 110 75
+    tiles = [
+        streettrash_papers
+        streettrash_papers
+        empty
+        streettrash_papers
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Street Trash – Papers (Sparse)
+    bitmap = 1
+    color = 150 120 80
+    tiles = [
+        streettrash_papers
+        empty
+        empty
+        streettrash_papers
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Street Trash – Bulk (Dense)
+    bitmap = 1
+    color = 130 90 60
+    tiles = [
+        streettrash_bulk
+        streettrash_bulk
+        streettrash_bulk
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Street Trash – Bulk (Medium)
+    bitmap = 1
+    color = 135 95 65
+    tiles = [
+        streettrash_bulk
+        streettrash_bulk
+        empty
+        streettrash_bulk
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Street Trash – Bulk (Sparse)
+    bitmap = 1
+    color = 140 100 70
+    tiles = [
+        streettrash_bulk
+        empty
+        empty
+        streettrash_bulk
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Street Trash – Small Scatter (Dense)
+    bitmap = 1
+    color = 155 125 90
+    tiles = [
+        streettrash_small
+        streettrash_small
+        streettrash_small
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Street Trash – Small Scatter (Medium)
+    bitmap = 1
+    color = 160 130 95
+    tiles = [
+        streettrash_small
+        streettrash_small
+        empty
+        streettrash_small
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Street Trash – Small Scatter (Sparse)
+    bitmap = 1
+    color = 165 135 100
+    tiles = [
+        streettrash_small
+        empty
+        empty
+        streettrash_small
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+alias
+{
+    name = groundtrash_small
+    tiles = [
+        d_trash_1_0
+        d_trash_1_1
+        d_trash_1_2
+        d_trash_1_3
+        d_trash_1_4
+        d_trash_1_5
+        d_trash_1_6
+        d_trash_1_7
+    ]
+}
+
+rule
+{
+    label = Ground Trash (Dense)
+    bitmap = 1
+    color = 120 80 50
+    tiles = [
+        groundtrash_small
+        groundtrash_small
+        groundtrash_small
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Ground Trash (Medium)
+    bitmap = 1
+    color = 125 85 55
+    tiles = [
+        groundtrash_small
+        groundtrash_small
+        empty
+        groundtrash_small
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Ground Trash (Sparse)
+    bitmap = 1
+    color = 130 90 60
+    tiles = [
+        groundtrash_small
+        empty
+        empty
+        groundtrash_small
+        empty
+        invisible_01_0
+    ]
+    layer = 0_Vegetation
+}
+
+alias
+{
+    name = broken_glass
+    tiles = [
+        brokenglass_1_0
+        brokenglass_1_1
+        brokenglass_1_2
+        brokenglass_1_3
+    ]
+}
+
+rule
+{
+    label = Broken Glass (Dense)
+    bitmap = 1
+    color = 150 200 210
+    tiles = [
+        broken_glass
+        broken_glass
+        broken_glass
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Broken Glass (Medium)
+    bitmap = 1
+    color = 155 205 215
+    tiles = [
+        broken_glass
+        broken_glass
+        empty
+        broken_glass
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Broken Glass (Sparse)
+    bitmap = 1
+    color = 160 210 220
+    tiles = [
+        broken_glass
+        empty
+        empty
+        broken_glass
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Street Cracks – Small (Dense)
+    bitmap = 1
+    color = 90 90 90
+    tiles = [
+        street_cracks_small
+        street_cracks_small
+        street_cracks_small
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Street Cracks – Small (Medium)
+    bitmap = 1
+    color = 95 95 95
+    tiles = [
+        street_cracks_small
+        street_cracks_small
+        empty
+        street_cracks_small
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Street Cracks – Small (Sparse)
+    bitmap = 1
+    color = 100 100 100
+    tiles = [
+        street_cracks_small
+        empty
+        empty
+        street_cracks_small
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Street Cracks – Medium (Dense)
+    bitmap = 1
+    color = 105 105 105
+    tiles = [
+        street_cracks_med
+        street_cracks_med
+        street_cracks_med
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Street Cracks – Medium (Medium)
+    bitmap = 1
+    color = 110 110 110
+    tiles = [
+        street_cracks_med
+        street_cracks_med
+        empty
+        street_cracks_med
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Street Cracks – Medium (Sparse)
+    bitmap = 1
+    color = 115 115 115
+    tiles = [
+        street_cracks_med
+        empty
+        empty
+        street_cracks_med
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Street Cracks – Heavy (Dense)
+    bitmap = 1
+    color = 120 120 120
+    tiles = [
+        street_cracks_heavy
+        street_cracks_heavy
+        street_cracks_heavy
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Street Cracks – Heavy (Medium)
+    bitmap = 1
+    color = 125 125 125
+    tiles = [
+        street_cracks_heavy
+        street_cracks_heavy
+        empty
+        street_cracks_heavy
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Street Cracks – Heavy (Sparse)
+    bitmap = 1
+    color = 130 130 130
+    tiles = [
+        street_cracks_heavy
+        empty
+        empty
+        street_cracks_heavy
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Blood – Heavy
+    bitmap = 1
+    color = 140 0 0
+    tiles = [
+        blood_splatters
+        blood_splatters
+        blood_splatters
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Blood – Medium
+    bitmap = 1
+    color = 150 0 0
+    tiles = [
+        blood_splatters
+        blood_splatters
+        empty
+        blood_splatters
+        empty
+    ]
+    layer = 0_Vegetation
+}
+rule
+{
+    label = Blood – Sparse
+    bitmap = 1
+    color = 160 0 0
+    tiles = [
+        blood_splatters
+        empty
+        empty
+        blood_splatters
+        empty
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
+rule
+{
+    label = Grimy Street Mix
+    bitmap = 1
+    color = 135 120 105
+    tiles = [
+        street_cracks_small
+        street_cracks_med
+        streettrash_small
+        empty
+        street_cracks_small
+        empty
+    ]
+    layer = 0_Vegetation
+}
+
