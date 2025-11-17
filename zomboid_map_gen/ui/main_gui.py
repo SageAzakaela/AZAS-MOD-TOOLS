@@ -20,6 +20,7 @@ from .rules_palette_gui import RulesPaletteTab
 from .roads_gui import RoadsTab
 from .export_gui import ExportTab
 from .details_gui import DetailsTab
+from .tmx_tools import TmxReadWindow
 
 
 THUMB_SIZE = (300, 300)   # larger thumbnails, keep aspect via .thumbnail
@@ -264,8 +265,8 @@ class InfinitXYZApp(tk.Tk):
     def _build_menu(self):
         mb = tk.Menu(self)
         filem = tk.Menu(mb, tearoff=0)
-        filem.add_command(label="Open Config…", command=self._menu_load)
-        filem.add_command(label="Save Config As…", command=self._menu_save)
+        filem.add_command(label="Open Config.", command=self._menu_load)
+        filem.add_command(label="Save Config As.", command=self._menu_save)
         filem.add_separator()
         filem.add_command(label="Exit", command=self.destroy)
         defaultm = tk.Menu(filem, tearoff=0)
@@ -277,6 +278,12 @@ class InfinitXYZApp(tk.Tk):
             defaultm.add_command(label="(no presets found)", state="disabled")
         filem.add_cascade(label="Default Configs", menu=defaultm)
         mb.add_cascade(label="File", menu=filem)
+
+        toolm = tk.Menu(mb, tearoff=0)
+        toolm.add_command(label="TMX Read.", command=self._menu_tmx_read)
+        toolm.add_command(label="TMX Edit.", state="disabled")
+        toolm.add_command(label="TMX Build.", state="disabled")
+        mb.add_cascade(label="Tool", menu=toolm)
 
         exportm = tk.Menu(mb, tearoff=0)
         exportm.add_command(label="Open Output Folder", command=self._open_output_folder)
@@ -342,6 +349,16 @@ class InfinitXYZApp(tk.Tk):
             return
         self._apply_conf(conf, f"Config loaded: {path}")
         self.sound.bubble()
+
+    def _menu_tmx_read(self):
+        path = filedialog.askopenfilename(title="Open TMX File", filetypes=[("TMX", "*.tmx"), ("All files", "*.*")])
+        if not path:
+            return
+        try:
+            window = TmxReadWindow(self, Path(path))
+            self.wait_window(window.top)
+        except Exception as exc:
+            messagebox.showerror("TMX Reader", f"Failed to read TMX:\n{exc}")
 
     def _apply_conf(self, conf, status_text=None):
         self.conf = conf
